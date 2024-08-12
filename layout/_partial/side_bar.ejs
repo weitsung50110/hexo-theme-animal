@@ -1,0 +1,30 @@
+<!-- 社群連結側邊欄 -->
+<div class="social-sidebar">
+  <h2><%- __('menu.follow_me') %></h2>
+  <a href="<%- theme.menu.GitHub1 %>" target="_blank"><i class="fab fa-github"></i><%- theme.menu.GitHub2 %></a>
+  <a href="<%- theme.menu.Medium1 %>" target="_blank"><i class="fab fa-medium"></i><%- theme.menu.Medium2 %></a>
+
+  <% if (site.categories.length > 0) { %>
+    <div class="categories">
+      <h3><%- __('menu.categories') %></h3>
+      <ul>
+        <% site.categories.forEach(function(category) { %>
+          <li><a href="<%- category.permalink %>"><%- category.name %></a></li>
+        <% }) %>
+      </ul>
+    </div>
+  <% } %>
+  
+  <!-- Tags -->
+<% if (site.tags.length > 0) { %>
+  <div class="tags">
+    <h3><%- __('menu.tags') %></h3>
+    <ul>
+      <% site.tags.forEach(function(tag) { %>
+        <li><a href="<%- tag.permalink  %>"><%- tag.name %></a></li>
+      <% }) %>
+    </ul>
+  </div>
+<% } %>
+
+</div>

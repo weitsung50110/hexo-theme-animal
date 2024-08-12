@@ -1,0 +1,11 @@
+<main>
+  <h2>Archives</h2>
+  <ul>
+    <% site.posts.each(function(post) { %>
+      <li>
+        <a href="<%- post.permalink %>"><%- post.title %></a>
+        <span class="date"> - <%= post.date.format('MMMM YYYY') %></span>
+      </li>
+    <% }) %>
+  </ul>
+</main>

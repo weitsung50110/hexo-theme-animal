@@ -1,0 +1,126 @@
+/* Archives 的主要區域 */
+main {
+  max-width: 800px; /* 控制內容的最大寬度 */
+  margin: 0 auto; /* 垂直居中內容 */
+  padding: 20px; /* 內邊距 */
+  background: #f9f9f9; /* 背景顏色 */
+  border-radius: 8px; /* 圓角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影 */
+}
+
+/* Archives 標題樣式 */
+main h2 {
+  font-size: 2em; /* 標題字體大小 */
+  color: #333; /* 標題顏色 */
+  margin-bottom: 20px; /* 標題下方間距 */
+  border-bottom: 2px solid #4fc3f7; /* 底部邊框 */
+  padding-bottom: 10px; /* 標題底部內邊距 */
+  text-align: center; /* 標題居中對齊 */
+}
+
+/* 文章列表樣式 */
+main ul {
+  list-style: none; /* 去掉列表前的符號 */
+  padding: 0; /* 去掉內邊距 */
+  margin: 0; /* 去掉外邊距 */
+}
+
+main ul li {
+  padding: 10px; /* 內邊距 */
+  border-bottom: 1px solid #ddd; /* 列表項目分隔線 */
+  margin-bottom: 10px; /* 列表項目下方間距 */
+}
+
+main ul li:last-child {
+  border-bottom: none; /* 去掉最後一項的分隔線 */
+}
+
+main ul li a {
+  color: #4fc3f7; /* 文章標題顏色 */
+  text-decoration: none; /* 去掉下劃線 */
+  font-size: 1.2em; /* 文章標題字體大小 */
+}
+
+main ul li a:hover {
+  text-decoration: underline; /* 懸停時顯示下劃線 */
+  color: #003c71; /* 懸停顏色 */
+}
+
+/* 文章日期樣式 */
+main ul li span.date {
+  color: #666; /* 日期顏色 */
+  font-style: italic; /* 日期斜體 */
+  font-size: 0.9em; /* 日期字體大小 */
+}
+
+/* 標籤區域樣式 */
+#tags {
+  margin-top: 20px; /* 上方間距 */
+  padding: 10px; /* 內邊距 */
+  background: #e3f2fd; /* 背景顏色 */
+  border-radius: 4px; /* 圓角 */
+}
+
+#tags h3 {
+  font-size: 1.5em; /* 標籤標題字體大小 */
+  color: #333; /* 標籤標題顏色 */
+  margin-bottom: 10px; /* 標籤標題下方間距 */
+}
+
+#tags ul {
+  list-style: none; /* 去掉列表前的符號 */
+  padding: 0; /* 去掉內邊距 */
+  margin: 0; /* 去掉外邊距 */
+}
+
+#tags ul li {
+  display: inline-block; /* 行內顯示 */
+  margin-right: 10px; /* 右側間距 */
+}
+
+#tags ul li a {
+  color: #4fc3f7; /* 標籤顏色 */
+  text-decoration: none; /* 去掉下劃線 */
+  font-size: 1em; /* 標籤字體大小 */
+}
+
+#tags ul li a:hover {
+  text-decoration: underline; /* 懸停時顯示下劃線 */
+  color: #003c71; /* 懸停顏色 */
+}
+
+/* 分類區域樣式 */
+#category {
+  margin-top: 20px; /* 上方間距 */
+  padding: 10px; /* 內邊距 */
+  background: #e8f5e9; /* 背景顏色 */
+  border-radius: 4px; /* 圓角 */
+}
+
+#category h3 {
+  font-size: 1.5em; /* 分類標題字體大小 */
+  color: #333; /* 分類標題顏色 */
+  margin-bottom: 10px; /* 分類標題下方間距 */
+}
+
+#category ul {
+  list-style: none; /* 去掉列表前的符號 */
+  padding: 0; /* 去掉內邊距 */
+  margin: 0; /* 去掉外邊距 */
+}
+
+#category ul li {
+  display: inline-block; /* 行內顯示 */
+  margin-right: 10px; /* 右側間距 */
+}
+
+#category ul li a {
+  color: #66bb6a; /* 分類顏色 */
+  text-decoration: none; /* 去掉下劃線 */
+  font-size: 1em; /* 分類字體大小 */
+}
+
+#category ul li a:hover {
+  text-decoration: underline; /* 懸停時顯示下劃線 */
+  color: #388e3c; /* 懸停顏色 */
+}

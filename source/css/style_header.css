@@ -1,0 +1,98 @@
+header {
+  background: linear-gradient(135deg, #81d4fa, #4fc3f7);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* 使 header 內容垂直排列 */
+  align-items: center; /* 水平居中對齊內容 */
+  gap: 10px; /* 內容之間的間距 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row; /* 使 LOGO 和標題水平排列 */
+  align-items: center; /* 垂直居中對齊 LOGO 和標題 */
+  gap: 20px; /* LOGO 和標題之間的間距 */
+}
+
+header img {
+  max-width: 150px; /* 控制圖片的最大寬度 */
+  height: auto; /* 高度自動調整，保持圖片比例 */
+}
+
+header h1 {
+  margin: 0; /* 去掉標題的外邊距 */
+}
+
+header h1 a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5em; /* 標題的字體大小 */
+}
+
+header h1 a:hover {
+  color: #ffe1e1;
+}
+
+nav {
+  margin-top: 20px; /* 控制導航欄與 header 內容之間的間距 */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.menu-button {
+  background: #4fc3f7;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* 下拉菜單的樣式 */
+.nav-menu a {
+  display: block;
+  padding: 10px 15px; /* 內邊距 */
+  color: #333; /* 連結顏色 */
+  text-decoration: none; /* 去掉下劃線 */
+  border: 1px solid #ddd; /* 邊框顏色 */
+  border-radius: 4px; /* 圓角 */
+  background: #fff; /* 背景顏色 */
+  margin-bottom: 5px; /* 下面間距 */
+}
+
+.nav-menu a:hover {
+  background: #f8f9fa; /* 懸停背景顏色 */
+  color: #007bff; /* 懸停顏色 */
+}
+
+/* 添加動畫效果 */
+.nav-menu {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}

@@ -1,0 +1,21 @@
+<header>
+  <div class="header-content">
+    <img src="<%- config.url %><%- theme.custom.logo %>" alt="Logo">
+    <h1><a href="<%= config.url %>"><%= theme.title %></a></h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="<%- config.url %>/"><%- __('menu.home') %></a></li>
+      <li><a href="<%- config.url %>/about"><%- __('menu.about') %></a></li>
+      <li><a href="<%- config.url %>/archives"><%- __('menu.archives') %></a></li>
+      <li><button class="menu-button"><%- __('menu.follow_me') %><i class="fas fa-bars"></i></button></li>
+      
+      <!-- 下拉菜單 -->
+      <div class="nav-menu">
+        <a href="<%- theme.menu.GitHub1 %>"><%- theme.menu.GitHub2 %></a>
+        <a href="<%- theme.menu.Medium1 %>"><%- theme.menu.Medium2 %></a>
+      </div>
+    </ul>
+  </nav>
+  <button id="toggleButton">三<i class="fas fa-share-alt"></i></button>
+</header>

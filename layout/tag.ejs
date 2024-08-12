@@ -1,0 +1,26 @@
+<div id="tags">
+    <h1><%= page.title %></h1>
+    
+    <% if (page.posts && page.posts.length > 0) { %>
+      <ul class="post-list">
+        <% page.posts.each(function(post) { %>
+          <li>
+            <% if (post.link) { %>
+              <a href="<%= url_for(post.link) %>" target="_blank">
+                <%= post.title || 'No Title' %>
+              </a>
+            <% } else { %>
+              <a href="<%= url_for(post.path) %>">
+                <%= post.title || 'No Title' %>
+              </a>
+            <% } %>
+            <time datetime="<%= date_xml(post.date) %>">
+              <%= date(post.date) %>
+            </time>
+          </li>
+        <% }); %>
+      </ul>
+    <% } else { %>
+      <p>No posts found for this tag.</p>
+    <% } %>
+  </div>

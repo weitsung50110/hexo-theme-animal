@@ -1,0 +1,17 @@
+
+<div id="home" class="container home-intro">
+  <img src="<%- config.url %><%- theme.custom.home_intro_img %>" alt="Welcome Image" class="home-image">
+  <h2><%- theme.custom.wellcome1 %></h2>
+  <p><%- theme.custom.wellcome2 %></p>
+</div>
+
+<% page.posts.each(function(post) { %>
+  <article class="post">
+    <h2><a href="<%= post.permalink %>"><%= post.title %></a></h2>
+    <p class="post-date"><%= post.date.format('MMMM DD, YYYY') %></p>
+    <div class="excerpt">
+      <%- post.excerpt %>
+    </div>
+    <a class="read-more" href="<%= post.permalink %>">Read More</a>
+  </article>
+<% }); %>

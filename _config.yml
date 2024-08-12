@@ -1,0 +1,19 @@
+# _config.yml
+name: wei-theme
+version: 1.0.0
+
+author: Weiberson Chang (weitsung50110)
+title: Weiberson Chang Template
+
+custom:
+  logo: /images/2.png
+  home_intro_img: /images/1.png
+  wellcome1: "歡迎來到Weiberson Chang的網站！"
+  wellcome2: "在這裡你可以看到我做的模板，想更認識我也可以來我Github或Medium唷。"
+
+menu:
+  GitHub1: "https://github.com/weitsung50110"
+  GitHub2: "GitHub"
+  Medium1: "https://medium.com/@weiberson"
+  Medium2: "Medium"
+
