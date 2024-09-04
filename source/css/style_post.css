@@ -98,16 +98,27 @@
   background-color: #0056b3;
 }
 
+/* 行內程式碼樣式 */
+code {
+  background-color: #f8f8f8; /* 淺灰色背景 */
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  color: #d63384; /* 程式碼顏色 */
+}
+
+/* 多行程式碼區塊樣式 */
 pre {
-  position: relative; /* Ensures the button is positioned relative to the code block */
-  background-color: #f0f0f0; /* Light gray background */
+  background-color: #f0f0f0; /* 淺灰色背景 */
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 10px;
-  overflow-x: auto; /* Allows horizontal scrolling */
+  overflow-x: auto; /* 允許橫向滾動 */
+  white-space: pre-wrap; /* 確保空白符號不被折疊 */
+  margin: 0 0 1em 0;
 }
 
-code {
-  display: block;
-  white-space: pre; /* Preserve whitespace */
+pre code {
+  background: transparent; /* 使內部程式碼塊背景透明 */
+  color: inherit; /* 繼承父元素的顏色 */
 }

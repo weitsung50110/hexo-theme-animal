@@ -1,0 +1,68 @@
+/* main.css */
+
+/* 全局樣式 */
+/* 引入其他 CSS 文件 */
+@import url('style.css');
+@import url('style_archives.css');
+@import url('style_header.css');
+@import url('style_index_post.css');
+@import url('style_post.css');
+@import url('style_sidebar.css');
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .home-intro h2 {
+      font-size: 1.5em;
+    }
+  
+    header {
+      flex-direction: column;
+    }
+  
+    .header-content {
+      flex-direction: column;
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav a {
+      margin-bottom: 10px;
+    }
+  
+    /* Archives 主內容 */
+    main {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home-intro h2 {
+      font-size: 1.2em;
+    }
+  
+    header {
+      padding: 15px;
+    }
+  
+    .header-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav {
+      align-items: center;
+    }
+  
+    button {
+      padding: 8px 16px;
+      font-size: 0.9em;
+    }
+  
+    /* Archives 主內容 */
+    main {
+      padding: 5px;
+    }
+  }
