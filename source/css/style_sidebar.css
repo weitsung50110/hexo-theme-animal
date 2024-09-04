@@ -44,7 +44,7 @@
   color: #fff; /* 按鈕文字顏色 */
   border: none; /* 去掉邊框 */
   padding: 10px 20px; /* 內邊距 */
-  border-radius: 4px; /* 圓角 */
+  border-radius: 35px; /* 圓角 */
   cursor: pointer; /* 滑鼠懸停時顯示手形 */
   font-size: 1em; /* 字體大小 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影 */

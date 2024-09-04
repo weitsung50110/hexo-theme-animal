@@ -1,42 +1,46 @@
+/* Header 樣式 */
 header {
   background: linear-gradient(135deg, #81d4fa, #4fc3f7);
   color: #fff;
   padding: 20px;
   display: flex;
-  flex-direction: column; /* 使 header 內容垂直排列 */
-  align-items: center; /* 水平居中對齊內容 */
-  gap: 10px; /* 內容之間的間距 */
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative; /* 為了使下拉菜單的定位有效 */
 }
 
+/* Header 內容 */
 .header-content {
   display: flex;
-  flex-direction: row; /* 使 LOGO 和標題水平排列 */
-  align-items: center; /* 垂直居中對齊 LOGO 和標題 */
-  gap: 20px; /* LOGO 和標題之間的間距 */
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
 header img {
-  max-width: 150px; /* 控制圖片的最大寬度 */
-  height: auto; /* 高度自動調整，保持圖片比例 */
+  max-width: 150px;
+  height: auto;
 }
 
 header h1 {
-  margin: 0; /* 去掉標題的外邊距 */
+  margin: 0;
 }
 
 header h1 a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 1.5em; /* 標題的字體大小 */
+  font-size: 1.5em;
 }
 
 header h1 a:hover {
   color: #ffe1e1;
 }
 
+/* 導航樣式 */
 nav {
-  margin-top: 20px; /* 控制導航欄與 header 內容之間的間距 */
+  margin-top: 20px;
 }
 
 nav ul {
@@ -44,15 +48,13 @@ nav ul {
   padding: 0;
   margin: 0;
   text-align: center;
+  position: relative; /* 為了使下拉菜單的定位有效 */
 }
 
 nav ul li {
   display: inline-block;
   margin: 0 10px;
-}
-
-nav ul li:last-child {
-  margin-right: 0;
+  position: relative; /* 為了使下拉菜單的定位有效 */
 }
 
 nav ul li a {
@@ -73,26 +75,65 @@ nav ul li a:hover {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1em;
+  position: relative; /* 為了使下拉菜單的定位有效 */
 }
 
-/* 下拉菜單的樣式 */
+/* 下拉菜單樣式 */
+.nav-menu {
+  display: none; /* 默認隱藏 */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0; /* 初始透明度為0 */
+  pointer-events: none; /* 初始禁用點擊事件 */
+}
+
+/* 顯示下拉菜單 */
+.dropdown:hover .nav-menu,
+.dropdown .nav-menu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 下拉菜單連結樣式 */
 .nav-menu a {
   display: block;
-  padding: 10px 15px; /* 內邊距 */
-  color: #333; /* 連結顏色 */
-  text-decoration: none; /* 去掉下劃線 */
-  border: 1px solid #ddd; /* 邊框顏色 */
-  border-radius: 4px; /* 圓角 */
-  background: #fff; /* 背景顏色 */
-  margin-bottom: 5px; /* 下面間距 */
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
 }
 
 .nav-menu a:hover {
-  background: #f8f9fa; /* 懸停背景顏色 */
-  color: #007bff; /* 懸停顏色 */
+  background: #f8f9fa;
+  color: #007bff;
 }
 
-/* 添加動畫效果 */
-.nav-menu {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+/* Toggle Button */
+#toggleButton {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#toggleButton i {
+  margin-left: 5px;
+}
+
+#toggleButton:hover {
+  background: #0056b3;
 }

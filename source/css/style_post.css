@@ -81,3 +81,33 @@
   margin: 10px 0; /* 上下邊距 */
 }
 
+.copy-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 1; /* Ensure button is above the code block */
+}
+
+.copy-button:hover {
+  background-color: #0056b3;
+}
+
+pre {
+  position: relative; /* Ensures the button is positioned relative to the code block */
+  background-color: #f0f0f0; /* Light gray background */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-x: auto; /* Allows horizontal scrolling */
+}
+
+code {
+  display: block;
+  white-space: pre; /* Preserve whitespace */
+}
