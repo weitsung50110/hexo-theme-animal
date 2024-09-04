@@ -6,3 +6,7 @@ menu:
   tags_categories: 'Tags & Categories'
   tags: 'Tags'
   categories: 'Categories'
+
+post:
+  date: 'Date：'
+  author: 'Author：'

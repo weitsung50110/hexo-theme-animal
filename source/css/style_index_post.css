@@ -1,0 +1,70 @@
+/* 整體文章區域 */
+.index_post {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  max-width: 900px; /* 設置最大寬度，使文章區域不會過於寬 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 鼠標懸停效果 */
+.index_post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 標題樣式 */
+.index_post h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.index_post h2 a {
+  color: #ff6f61;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.index_post h2 a:hover {
+  color: #e64a19;
+}
+
+/* 文章信息區 */
+.index_post p {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.index_post .post-date, .index_post .post-author {
+  font-style: italic;
+  color: #666;
+}
+
+/* 摘要區 */
+.index_post .excerpt {
+  color: #555;
+  line-height: 1.8;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* 讀更多連結 */
+.index_post .read-more {
+  display: block;
+  text-align: center;
+  font-size: 1.2em;
+  color: #4fc3f7;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.index_post .read-more:hover {
+  text-decoration: underline;
+}

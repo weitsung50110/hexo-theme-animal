@@ -6,3 +6,7 @@ menu:
   tags_categories: '標籤與分類'
   tags: '標籤'
   categories: '分類'
+
+post:
+  date: '日期：'
+  author: '作者：'
