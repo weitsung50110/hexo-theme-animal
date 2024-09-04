@@ -19,6 +19,14 @@ This project use ejs as template.
 
 然後在主要模板中包含這些文件。這樣可以避免在每個頁面中重複寫相同的 HTML 結構。
 
+## 如何使用主題?
+1. 請先把我的主題clone到本地。
+
+        git clone https://github.com/weitsung50110/hexo-theme-animal.git
+
+2. 並把主題放入你的部落格下面，路徑為`你的Blog`>>`themes`>>`hexo-theme-animal`
+![](https://raw.githubusercontent.com/weitsung50110/hexo-theme-animal/main/github_img/a3.png)
+
 ## 重點 - 需要設定網站的 _config.yml
 url請放你github page 的網址
 
