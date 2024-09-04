@@ -29,7 +29,7 @@ url請放你github page 的網址
 主題選你創的名稱
 
     # Extensions
-    theme: wei-theme
+    theme: hexo-theme-animal
 
 路徑設定 - config.root代表你根目錄的概念，像本repo的根目錄是設定 `/hexo_theme_basic/demo`
 
@@ -45,9 +45,30 @@ url請放你github page 的網址
           <li><a href="<%- config.root %>/about">About</a></li>
     </ul>
     
-## 需要設定主題的 _config.yml
+## 可以客製化設定theme的 _config.yml
 
     # _config.yml
-    name: Wei Theme
+    name: hexo-theme-animal
     version: 1.0.0
-    author: Weiberson weitsung50110
+    
+    author: Weiberson Chang (weitsung50110)
+    title: Weiberson Chang Template
+    
+    custom:
+      logo: /images/2.png
+      home_intro_img: /images/1.png
+      wellcome1: "歡迎來到Weiberson Chang的網站！"
+      wellcome2: "在這裡你可以看到我做的模板，想更認識我也可以來我Github或Medium唷。"
+    
+    menu:
+      GitHub1: "https://github.com/weitsung50110"
+      GitHub2: "GitHub"
+      Medium1: "https://medium.com/@weiberson"
+      Medium2: "Medium"
+
+這裡都可以自由更改成你想要的內容。
+
+## 語言選擇
+目前提供中文和英文
+
+`language: cn`和`language: en`，未來可能還會增加(?) 請去網站的_config.yml進行設定。
