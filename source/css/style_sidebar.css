@@ -1,37 +1,43 @@
-
-
+/* 社交連結側邊欄的樣式 */
 .social-sidebar {
   position: fixed;
   top: 20%;
   right: 0;
+  width: 20%;
+  padding: 7px;
+  background-color: #f7ffff;
+  color: #000000;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2); /* 深色陰影 */
+  border-top-left-radius: 15px; /* 圓角邊框 */
+  border-bottom-left-radius: 15px;
   transform: translateX(100%);
-  transition: transform 0.3s ease; /* 添加平移过渡效果 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加過渡效果 */
 }
 
-/* 社交链接侧边栏样式 */
-.social-sidebar {
-  background-color: #4fc3f7;
-  color: #fff;
-  width: 250px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+/* 側邊欄標題 */
+.social-sidebar h3 {
+  margin-bottom: 7px;
+  font-weight: bold;
+  color: #000000;
 }
 
-.social-sidebar h2 {
-  margin-bottom: 10px;
-}
-
+/* 社交連結樣式 */
 .social-sidebar a {
-  display: block;
-  color: #fff;
+  display: flex;
+  align-items: center; /* 使圖標和文字垂直居中 */
+  color: #6a2f0d;
   text-decoration: none;
-  margin-bottom: 10px;
-  transition: color 0.3s ease; /* 添加颜色过渡效果 */
+  margin-bottom: 3px;
+  transition: color 0.3s ease, transform 0.3s ease; /* 添加顏色和縮放過渡效果 */
 }
 
 .social-sidebar a:hover {
-  color: #ccc;
+  transform: scale(1.05); /* 懸停時的縮放效果 */
+}
+
+/* 類別和標籤區域 */
+.social-sidebar .categories, .social-sidebar .tags {
+  margin-top: 10px;
 }
 
 /* 固定在網頁左邊中間的按鈕 */

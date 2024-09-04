@@ -37,7 +37,7 @@
       padding: 10px;
     }
 
-    
+
     /* 移動版選單的顯示 */
     .mobile-nav.active {
         display: block; /* 顯示菜單 */
@@ -80,6 +80,12 @@
     .mobile-nav ul li a:hover {
         background: #f8f9fa;
     }
+
+
+    .social-sidebar {
+        width: 25%;
+      }
+
   }
   
   @media (max-width: 480px) {
@@ -109,4 +115,8 @@
     main {
       padding: 5px;
     }
+
+    .social-sidebar {
+        width: 30%;
+      }
   }
