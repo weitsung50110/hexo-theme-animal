@@ -28,11 +28,20 @@ This project use ejs as template.
 ![](https://raw.githubusercontent.com/weitsung50110/hexo-theme-animal/main/github_img/a3.png)
 
 ## 重點 - 需要設定網站的 _config.yml
+**本地測試使用**
+
+url請放你 localhost 的網址
+
+    # URL
+    url: http://localhost:4000
+  
+**上架到github page**
+
 url請放你github page 的網址
 
     # URL
     url: https://weitsung50110.github.io/hexo_theme_basic/demo
-    root: /hexo_theme_basic/demo
+    
 
 主題選你創的名稱
 
