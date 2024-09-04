@@ -3,9 +3,9 @@ menu:
   about: '關於'
   archives: '檔案'
   follow_me: '跟隨我'
-  tags_categories: '標籤與分類'
+  tags_categories: '標籤與類別'
   tags: '標籤'
-  categories: '分類'
+  categories: '類別'
 
 post:
   date: '日期：'

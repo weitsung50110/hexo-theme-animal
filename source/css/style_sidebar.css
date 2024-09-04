@@ -38,12 +38,12 @@
 #toggleButton {
   position: fixed; /* 固定定位 */
   left: 2px; /* 距離左邊 20 像素，根據需求調整 */
-  top: 50%; /* 垂直中心對齊 */
+  top: 94%; /* 垂直中心對齊 */
   transform: translateY(-50%); /* 垂直居中對齊 */
   background-color: #007bff; /* 按鈕背景顏色 */
   color: #fff; /* 按鈕文字顏色 */
   border: none; /* 去掉邊框 */
-  padding: 10px 20px; /* 內邊距 */
+  padding: 3px 3px; /* 內邊距 */
   border-radius: 35px; /* 圓角 */
   cursor: pointer; /* 滑鼠懸停時顯示手形 */
   font-size: 1em; /* 字體大小 */
@@ -53,4 +53,15 @@
 
 #toggleButton:hover {
   background-color: #0056b3; /* 懸停時的背景顏色 */
+}
+
+#toggleButton2 {
+  background: #4fc3f7;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  position: relative; /* 為了使下拉菜單的定位有效 */
 }

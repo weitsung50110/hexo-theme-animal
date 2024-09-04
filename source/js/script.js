@@ -3,10 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // 取得下拉菜單和切換按鈕
   const navMenu = document.querySelector('.nav-menu');
   const menuButton = document.querySelector('.menu-button');
-  const toggleButton = document.querySelector('#toggleButton');
-  const socialSidebar = document.querySelector('.social-sidebar');
-
-  socialSidebar.style.transform = 'translateX(100%)'; // 初始隐藏社交链接侧边栏
 
   // 初始化下拉菜單狀態
   navMenu.style.opacity = '0';
@@ -30,13 +26,13 @@ document.addEventListener('DOMContentLoaded', function () {
       navMenu.style.pointerEvents = 'none';
     }
   });
+  
 
-  // 點擊 toggle 按鈕的行為
-  toggleButton.addEventListener('click', () => {
-    if (socialSidebar.style.transform === 'translateX(100%)') {
-      socialSidebar.style.transform = 'translateX(0)';
-    } else {
-      socialSidebar.style.transform = 'translateX(100%)';
-    }
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  menuToggle.addEventListener('click', function() {
+    // 切換菜單的顯示狀態
+    mobileNav.classList.toggle('active');
   });
 });

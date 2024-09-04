@@ -36,6 +36,50 @@
     main {
       padding: 10px;
     }
+
+    
+    /* 移動版選單的顯示 */
+    .mobile-nav.active {
+        display: block; /* 顯示菜單 */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    
+    .mobile-nav {
+        display: none; /* 初始隱藏 */
+        position: absolute;
+        top: 60px; /* 根據需要調整 */
+        right: 20px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    
+    .mobile-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .mobile-nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .mobile-nav ul li a {
+        display: block;
+        padding: 10px;
+        color: #333;
+        text-decoration: none;
+    }
+    
+    .mobile-nav ul li a:hover {
+        background: #f8f9fa;
+    }
   }
   
   @media (max-width: 480px) {

@@ -116,24 +116,17 @@ nav ul li a:hover {
   color: #007bff;
 }
 
-/* Toggle Button */
-#toggleButton {
-  background: #007bff;
+/* 漢堡選單樣式 */
+.menu-toggle {
+  display: none;
+  background: #4fc3f7;
   color: #fff;
   border: none;
-  padding: 10px 15px;
-  border-radius: 4px;
+  padding: 10px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 1em;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-#toggleButton i {
-  margin-left: 5px;
-}
-
-#toggleButton:hover {
-  background: #0056b3;
+  font-size: 1.5em;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
