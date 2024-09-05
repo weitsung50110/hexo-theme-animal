@@ -2,16 +2,16 @@
 .social-sidebar {
   position: fixed;
   top: 20%;
-  right: 0;
+  left: 0; /* 改為 left */
   width: 20%;
   padding: 7px;
   background-color: #f7ffff;
   color: #000000;
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2); /* 深色陰影 */
-  border-top-left-radius: 15px; /* 圓角邊框 */
-  border-bottom-left-radius: 15px;
-  transform: translateX(100%);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加過渡效果 */
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2); /* 改為右側的陰影 */
+  border-top-right-radius: 15px; /* 改為右邊的圓角邊框 */
+  border-bottom-right-radius: 15px;
+  transform: translateX(-100%); /* 初始位置在左側外部 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 過渡效果 */
 }
 
 /* 側邊欄標題 */
