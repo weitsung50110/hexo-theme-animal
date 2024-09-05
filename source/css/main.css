@@ -12,7 +12,11 @@
 /* 響應式設計 */
 @media (max-width: 768px) {
     .home-intro h2 {
-      font-size: 1.5em;
+      font-size: 1.5em; /* 平板或小屏幕的字體大小 */
+    }
+
+    header h1 {
+      font-size: 1.8em; /* 根據需要調整 */
     }
   
     header {
@@ -90,7 +94,11 @@
   
   @media (max-width: 480px) {
     .home-intro h2 {
-      font-size: 1.2em;
+      font-size: 1.2em; /* 手機屏幕的字體大小 */
+    }
+  
+    header h1 {
+      font-size: 1.5em; /* 根據需要調整 */
     }
   
     header {
