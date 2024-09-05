@@ -7,7 +7,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
-  max-width: 800px; /* 設置最大寬度，避免內容過於寬 */
+  max-width: auto; /* 設置最大寬度，避免內容過於寬 */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -23,6 +23,7 @@
   margin-bottom: 15px;
   color: #222;
   text-align: left; /* 標題左對齊 */
+  padding: 5px;
 }
 
 .post h2 {
@@ -48,23 +49,25 @@
   line-height: 1.6; /* 提升行間距以增強可讀性 */
 }
 
-.post-date, .post-author {
+/* 摘要區,日期,作者 */
+.post-date, .post-author{
   font-style: italic;
   color: #666;
+  margin: 10px 0;
+  padding: 5px;
 }
 
-/* 摘要區 */
-.post .excerpt {
-  color: #555;
-  line-height: 1.8;
-  margin: 20px 0;
+.post .excerpt{
+  color: #454242;
+  line-height: 1;
+  padding: 5px;
 }
 
 /* 內容區域 */
 .content {
   max-width: 100%;
   margin: 0;
-  padding: 20px;
+  padding: 5px;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 8px;

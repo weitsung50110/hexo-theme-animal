@@ -5,13 +5,15 @@
   <p><%- theme.custom.wellcome2 %></p>
 </div>
 
-<% page.posts.each(function(post) { %>
-  <article class="index_post">
-    <h2><a href="<%= post.permalink %>"><%= post.title %></a></h2>
-    <p class="post-date"><%= post.date.format('MMMM DD, YYYY') %></p>
-    <div class="excerpt">
-      <%- post.excerpt %>
-    </div>
-    <a class="read-more" href="<%= post.permalink %>">Read More</a>
-  </article>
-<% }); %>
+<div class="posts-container">
+  <% page.posts.each(function(post) { %>
+    <article class="index_post">
+      <h2><a href="<%= post.permalink %>"><%= post.title %></a></h2>
+      <p class="post-date"><%= post.date.format('MMMM DD, YYYY') %></p>
+      <div class="excerpt">
+        <%- post.excerpt %>
+      </div>
+      <a class="read-more" href="<%= post.permalink %>">Read More</a>
+    </article>
+  <% }); %>
+</div>

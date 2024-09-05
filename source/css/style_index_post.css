@@ -1,13 +1,18 @@
 /* 整體文章區域 */
+.posts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自适应列数 */
+  gap: 20px; /* 文章之间的间距 */
+}
+
+/* 每篇文章的樣式 */
 .index_post {
   font-family: 'Arial', sans-serif;
   color: #333;
-  margin: 20px auto;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
-  max-width: 900px; /* 設置最大寬度，使文章區域不會過於寬 */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
