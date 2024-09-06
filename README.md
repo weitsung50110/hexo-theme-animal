@@ -13,7 +13,7 @@ This project use ejs as template.
 - post.ejs
 - about.ejs
 
-![](https://raw.githubusercontent.com/weitsung50110/hexo_theme_basic/main/github_img/a2.png)
+![](https://raw.githubusercontent.com/weitsung50110/hexo-theme-animal/main/github_img/a6.png)
 
 利用 EJS ，將共用的 HTML 代碼（如頁眉、頁腳、導航條等）抽象成單獨的模板文件，
 
