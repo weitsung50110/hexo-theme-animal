@@ -2,28 +2,41 @@
   <div class="header-content">
     <img src="<%- config.url %><%- theme.custom.logo %>" alt="Logo">
     <h1><a href="<%= config.url %>"><%= theme.title %></a></h1>
+
+    <!-- 在 nav 中包裹選單 -->
+    <nav class="mobile-nav">
+      <ul class="nav-top">
+        <li><a href="<%- config.url %>/"><%- __('menu.home') %></a></li>
+        <li><a href="<%- config.url %>/about"><%- __('menu.about') %></a></li>
+        <li><a href="<%- config.url %>/archives"><%- __('menu.archives') %></a></li>
+        <li><a id="toggleButton2"><%- __('menu.tags') %>&<%- __('menu.categories') %></a></li>
+        <li class="dropdown">
+          <a class="menu-button"><%- __('menu.follow_me') %></a>
+          <div class="nav-menu">
+            <a href="<%- theme.menu.GitHub1 %>"><%- theme.menu.GitHub2 %></a>
+            <a href="<%- theme.menu.Medium1 %>"><%- theme.menu.Medium2 %></a>
+          </div>
+        </li>
+      </ul>
+      <!-- 搜尋框 -->
+      <ul class="nav-bottom">
+        <li>
+          <div id="search-container">
+            <input type="text" id="search-input" placeholder="搜尋文章..." />
+            <button id="search-button">搜尋</button>
+            <div id="search-results"></div>
+          </div>
+        </li>
+      </ul>
+    </nav>
   </div>
 
   <!-- 在 header 中添加漢堡選單 -->
-<button class="menu-toggle" aria-label="Toggle Navigation">
-  ☰
-</button>
+  <button class="menu-toggle" aria-label="Toggle Navigation">
+    ☰
+  </button>
 
-<!-- 在 nav 中包裹選單 -->
-<nav class="mobile-nav">
-  <ul>
-    <li><a href="<%- config.url %>/"><%- __('menu.home') %></a></li>
-    <li><a href="<%- config.url %>/about"><%- __('menu.about') %></a></li>
-    <li><a href="<%- config.url %>/archives"><%- __('menu.archives') %></a></li>
-    <li><button id="toggleButton2"><%- __('menu.tags') %>&<%- __('menu.categories') %></button></li>
-    <li class="dropdown">
-      <button class="menu-button"><%- __('menu.follow_me') %></button>
-      <div class="nav-menu">
-        <a href="<%- theme.menu.GitHub1 %>"><%- theme.menu.GitHub2 %></a>
-        <a href="<%- theme.menu.Medium1 %>"><%- theme.menu.Medium2 %></a>
-      </div>
-    </li>
-  </ul>
-</nav>
+  
+
   <button id="toggleButton"><%- __('menu.tags') %>&<br/><%- __('menu.categories') %></button>
 </header>

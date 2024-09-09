@@ -2,21 +2,18 @@
 header {
   background: linear-gradient(135deg, #81d4fa, #4fc3f7);
   color: #fff;
-  padding: 20px;
+  padding: 10px 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column; /* 將 header 分成兩行 */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: relative; /* 為了使下拉菜單的定位有效 */
+  position: relative;
 }
 
 /* Header 內容 */
 .header-content {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between; /* 左邊是標題，右邊是漢堡選單 */
 }
 
 header img {
@@ -40,57 +37,52 @@ header h1 a:hover {
 
 /* 導航樣式 */
 nav {
-  margin-top: 20px;
+  /* margin-top: 10px; */
+  display: flex;
+  flex-direction: column; /* 將選單分為上下兩行 */
 }
 
-nav ul {
+.nav-top {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: center;
-  position: relative; /* 為了使下拉菜單的定位有效 */
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-nav ul li {
-  display: inline-block;
-  margin: 0 10px;
-  position: relative; /* 為了使下拉菜單的定位有效 */
+.nav-top li {
+  display: flex;
+  align-items: center;
 }
 
-nav ul li a {
+.nav-top li a{
   color: #fff;
   text-decoration: none;
-  font-size: 1.2em;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-.menu-button {
-  background: #4fc3f7;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 5px;
-  cursor: pointer;
   font-size: 1em;
-  position: relative; /* 為了使下拉菜單的定位有效 */
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.nav-top li a:hover{
+  text-decoration: underline;
 }
 
 /* 下拉菜單樣式 */
 .nav-menu {
   display: none; /* 默認隱藏 */
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #fff;
+  position: absolute; /* 絕對定位 */
+  top: 100%; /* 從父元素（menu-button）底部開始 */
+  left: 0; /* 與父元素（menu-button）左邊對齊 */
+  background: #ffffff;
   border: 1px solid #ddd;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  opacity: 0; /* 初始透明度為0 */
+  opacity: 0;
   pointer-events: none; /* 初始禁用點擊事件 */
 }
 
@@ -99,21 +91,28 @@ nav ul li a:hover {
 .dropdown .nav-menu.show {
   display: block;
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0); /* 確保顯示時不移動 */
+  pointer-events: auto; /* 顯示時啟用點擊事件 */
 }
 
-/* 下拉菜單連結樣式 */
+/* 連結樣式 */
 .nav-menu a {
   display: block;
   padding: 10px 15px;
-  color: #333;
+  color: #333 !important;
   text-decoration: none;
   border-bottom: 1px solid #ddd;
 }
 
+/* 連結懸停樣式 */
 .nav-menu a:hover {
   background: #f8f9fa;
-  color: #007bff;
+  color: #007bff !important;
+}
+
+/* 確保 .dropdown 使用相對定位 */
+.dropdown {
+  position: relative; /* 使 .nav-menu 相對於這個容器定位 */
 }
 
 /* 漢堡選單樣式 */
@@ -127,6 +126,14 @@ nav ul li a:hover {
   cursor: pointer;
   font-size: 1.5em;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
+}
+
+/* 搜尋框樣式 */
+.nav-bottom {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
 }

@@ -8,6 +8,8 @@
 @import url('style_index_post.css');
 @import url('style_post.css');
 @import url('style_sidebar.css');
+@import url('style_search.css');
+
 
 /* 響應式設計 */
 @media (max-width: 768px) {
@@ -54,7 +56,7 @@
     .mobile-nav {
         display: none; /* 初始隱藏 */
         position: absolute;
-        top: 60px; /* 根據需要調整 */
+        top: 40px; /* 根據需要調整 */
         right: 20px;
         background: #fff;
         border: 1px solid #ddd;
@@ -74,14 +76,14 @@
         margin: 10px 0;
     }
     
-    .mobile-nav ul li a {
+    .mobile-nav ul li a{
         display: block;
         padding: 10px;
         color: #333;
         text-decoration: none;
     }
     
-    .mobile-nav ul li a:hover {
+    .mobile-nav ul li a:hover{
         background: #f8f9fa;
     }
 
@@ -89,7 +91,7 @@
     .social-sidebar {
         width: 25%;
       }
-
+    
   }
   
   @media (max-width: 480px) {

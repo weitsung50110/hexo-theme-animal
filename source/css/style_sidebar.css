@@ -60,14 +60,3 @@
 #toggleButton:hover {
   background-color: #0056b3; /* 懸停時的背景顏色 */
 }
-
-#toggleButton2 {
-  background: #4fc3f7;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  position: relative; /* 為了使下拉菜單的定位有效 */
-}

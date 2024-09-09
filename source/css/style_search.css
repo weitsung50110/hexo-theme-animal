@@ -1,0 +1,60 @@
+/* 搜尋框樣式 */
+#search-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#search-container {
+  position: relative;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#search-input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  width: 200px;
+}
+
+#search-button {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+#search-button:hover {
+  background-color: #0056b3;
+}
+
+/* 搜尋結果容器 */
+#search-results {
+  color:#007bff;
+  margin-top: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#search-results a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #007bff;
+  border-bottom: 1px solid #ddd;
+}
+
+#search-results a:hover {
+  background-color: #f0f0f0;
+}
