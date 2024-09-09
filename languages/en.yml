@@ -6,6 +6,7 @@ menu:
   tags_categories: 'Tags & Categories'
   tags: 'Tags'
   categories: 'Categories'
+  search: 'Search'
 
 post:
   date: 'Date：'

@@ -1,11 +1,11 @@
 ## hexo_theme_basic
 This is a very basic theme, but it already have lots of functions.
 
-Visit preview site: [瀏覽網站](https://weitsung50110.github.io/hexo-theme-animal-site/)
+Visit preview site: [瀏覽網站](https://weitsung50110.github.io/hexo_theme1/)
 
-https://weitsung50110.github.io/hexo-theme-animal-site/
+https://weitsung50110.github.io/hexo_theme1/
 
-https://github.com/weitsung50110/hexo-theme-animal-site
+https://github.com/weitsung50110/hexo_theme1
 
 This project use ejs as template.
 - index.ejs
@@ -89,38 +89,3 @@ url請放你github page 的網址
 目前提供中文和英文
 
 `language: cn`和`language: en`，未來可能還會增加(?) 請去網站的_config.yml進行設定。
-
-## 加入文章搜尋功能 Search function
-需要安裝 `hexo-generator-searchdb` 插件，這個插件可以生成一個 `.json` 檔案作為搜尋資料庫
-
-        npm install hexo-generator-searchdb --save
-
-打開你的 Hexo 根目錄下的 `_config.yml`，加入以下配置來啟用 JSON 格式的搜尋資料：
-
-        search:
-          path: search.json
-          field: post
-          content: true
-
-* `path: search.json` 指定生成 `.json` 檔案。
-* `field: post` 指定只索引文章。如果你還想要索引頁面，將它改為 `all`。
-* `content: true` 指定是否包括文章的內容。若只需要標題和摘要，可將其設為 `false`。
-
-在`/source/js/search.js`中有一個，路徑記得要修改~ 因為我的專案名字是在`hexo-theme-animal-site`，所以需要加上/hexo-theme-animal-site才能夠抓到。<br>
-hexo-theme-animal-site是我自己設定的專案名字，你需要根據你創建的專案名字來進行更改。
-
-        // 設置 JSON 文件的路徑
-        const searchDataUrl = '/hexo-theme-animal-site/search.json';
-
-若沒有改的話會出現以下錯誤
-
-        GET https://weitsung50110.github.io/search.json 404 (Not Found)
-        (anonymous) @ search.js:9
-        search.js:54 搜尋資料載入錯誤: Error: 網絡錯誤，無法加載 search.json
-            at search.js:12:13
-        (anonymous) @ search.js:54
-        Promise.catch
-        (anonymous) @ search.js:54
-
-因為預設會從`https://weitsung50110.github.io`抓取search.json，但我是在repo中架網站，所以路徑會變成`https://weitsung50110.github.io/hexo-theme-animal-site/search.json`。
-可以自己輸入`https://weitsung50110.github.io/hexo-theme-animal-site/search.json`之類的網址去看看會不會出現.json檔案!!
