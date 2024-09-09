@@ -105,3 +105,22 @@ url請放你github page 的網址
 * `path: search.json` 指定生成 `.json` 檔案。
 * `field: post` 指定只索引文章。如果你還想要索引頁面，將它改為 `all`。
 * `content: true` 指定是否包括文章的內容。若只需要標題和摘要，可將其設為 `false`。
+
+在`/source/js/search.js`中有一個，路徑記得要修改~ 因為我的專案比較特別是在hexo_theme1下面，所以需要加上/hexo_theme1才能夠抓到，請依照您的專案進行修改。
+
+        // 設置 JSON 文件的路徑
+        const searchDataUrl = '/hexo_theme1/search.json';
+
+若沒有改的話會出現以下錯誤
+
+        GET https://weitsung50110.github.io/search.json 404 (Not Found)
+        (anonymous) @ search.js:9
+        search.js:54 搜尋資料載入錯誤: Error: 網絡錯誤，無法加載 search.json
+            at search.js:12:13
+        (anonymous) @ search.js:54
+        Promise.catch
+        (anonymous) @ search.js:54
+
+因為預設會從`https://weitsung50110.github.io`抓取search.json，但我是在repo當中架網站，所以路徑會變成`https://weitsung50110.github.io/hexo_theme1/search.json`，
+
+可以自己輸入`https://weitsung50110.github.io/hexo_theme1/search.json`之類的網址去看看會不會出現.json檔案!!
