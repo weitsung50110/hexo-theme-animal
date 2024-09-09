@@ -89,3 +89,19 @@ url請放你github page 的網址
 目前提供中文和英文
 
 `language: cn`和`language: en`，未來可能還會增加(?) 請去網站的_config.yml進行設定。
+
+## 加入文章搜尋功能 Search function
+需要安裝 `hexo-generator-searchdb` 插件，這個插件可以生成一個 `.json` 檔案作為搜尋資料庫
+
+        npm install hexo-generator-searchdb --save
+
+打開你的 Hexo 根目錄下的 `_config.yml`，加入以下配置來啟用 JSON 格式的搜尋資料：
+
+        search:
+          path: search.json
+          field: post
+          content: true
+
+* `path: search.json` 指定生成 `.json` 檔案。
+* `field: post` 指定只索引文章。如果你還想要索引頁面，將它改為 `all`。
+* `content: true` 指定是否包括文章的內容。若只需要標題和摘要，可將其設為 `false`。
