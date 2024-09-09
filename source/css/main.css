@@ -54,21 +54,24 @@
     }
     
     .mobile-nav {
-        display: none; /* 初始隱藏 */
-        position: absolute;
-        top: 40px; /* 根據需要調整 */
-        right: 20px;
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
+      display: none; /* 初始隱藏 */
+      position: fixed; /* 使用固定定位 */
+      top: 50px; /* 調整為適合的距離 */
+      right: 10px; /* 調整為適合的距離 */
+      width: 95%; /* 設置為螢幕的 90% 寬度 */
+      /* max-width: 300px; 最大寬度限制 */
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      overflow: auto; /* 防止內容超出範圍 */
     }
     
     .mobile-nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
     
     .mobile-nav ul li {
@@ -76,17 +79,17 @@
         margin: 10px 0;
     }
     
-    .mobile-nav ul li a{
+    .mobile-nav ul li a {
         display: block;
         padding: 10px;
         color: #333;
         text-decoration: none;
+        white-space: nowrap; /* 防止內容換行 */
     }
     
-    .mobile-nav ul li a:hover{
+    .mobile-nav ul li a:hover {
         background: #f8f9fa;
     }
-
 
     .social-sidebar {
         width: 25%;
