@@ -24,8 +24,8 @@ This project use ejs as template.
 
 #### 目錄Table of Contents
 - [如何使用主題?](#如何使用主題)
-- [重點 - 需要設定在hexo根目錄的 _config.yml](#重點---需要設定在hexo根目錄的-_config.yml)
-- [可以客製化設定theme的 _config.yml](#可以客製化設定theme的-_config.yml)
+- [重點 - 需要設定在hexo根目錄的_config.yml](#重點---需要設定在hexo根目錄的_configyml)
+- [可以客製化設定theme的_config.yml](#可以客製化設定theme的_configyml)
 - [語言選擇](#語言選擇)
 - [加入文章搜尋功能 Search function](#加入文章搜尋功能-search-function)
 - [加入新的page - about](#加入新的page---about)
@@ -44,7 +44,7 @@ This project use ejs as template.
 2. 並把主題放入你的部落格下面，路徑為`你的Blog`>>`themes`>>`hexo-theme-animal`
 ![](https://raw.githubusercontent.com/weitsung50110/hexo-theme-animal/main/github_img/a3.png)
 
-## 重點 - 需要設定在hexo根目錄的 _config.yml
+## 重點 - 需要設定在hexo根目錄的_config.yml
 **本地測試使用**
 
 url請放你 localhost 的網址
@@ -79,7 +79,7 @@ url請放你github page 的網址
         <li><a href="<%- config.url %>/about"><%- __('menu.about') %></a></li>
         <li><a href="<%- config.url %>/archives"><%- __('menu.archives') %></a></li>
     
-## 可以客製化設定theme的 _config.yml
+## 可以客製化設定theme的_config.yml
 
     # _config.yml
     name: hexo-theme-animal
