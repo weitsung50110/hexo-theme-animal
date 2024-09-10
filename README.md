@@ -1,4 +1,4 @@
-## hexo_theme_basic
+## hexo-theme-animal
 This is a very basic theme, but it already have lots of functions.
 
 Visit preview site: [瀏覽網站](https://weitsung50110.github.io/hexo_theme1/)
@@ -27,7 +27,7 @@ This project use ejs as template.
 2. 並把主題放入你的部落格下面，路徑為`你的Blog`>>`themes`>>`hexo-theme-animal`
 ![](https://raw.githubusercontent.com/weitsung50110/hexo-theme-animal/main/github_img/a3.png)
 
-## 重點 - 需要設定網站的 _config.yml
+## 重點 - 需要設定在hexo根目錄的 _config.yml
 **本地測試使用**
 
 url請放你 localhost 的網址
@@ -40,7 +40,7 @@ url請放你 localhost 的網址
 url請放你github page 的網址
 
     # URL
-    url: https://weitsung50110.github.io/hexo_theme_basic/demo
+    url: url: https://weitsung50110.github.io/hexo-theme-animal-site/
     
 
 主題選你創的名稱
@@ -48,19 +48,19 @@ url請放你github page 的網址
     # Extensions
     theme: hexo-theme-animal
 
-路徑設定 - config.root代表你根目錄的概念，像本repo的根目錄是設定 `/hexo_theme_basic/demo`
+路徑設定 - config.url是你在hexo根目錄的`_config.yml`中設定的url ; 關於url_for 函數的用途：請參考我的部落格。
 
-    #script
-    <script src="<%- config.root %>js/script.js"></script>
+    #script 在footer.ejs中
+    <script src="<%- url_for('js/script.js') %>"></script>
 
-    #css
-    <link rel="stylesheet" href="<%- config.root %>css/style.css">  
+    #css 在head.ejs中
+    <link rel="stylesheet" href="<%- url_for('css/main.css') %>">
 
-    #選單
-    <ul>
-          <li><a href="<%- config.root %>/">Home</a></li>
-          <li><a href="<%- config.root %>/about">About</a></li>
-    </ul>
+    #選單 在header.ejs中
+    <ul class="nav-top">
+        <li><a href="<%- config.url %>/"><%- __('menu.home') %></a></li>
+        <li><a href="<%- config.url %>/about"><%- __('menu.about') %></a></li>
+        <li><a href="<%- config.url %>/archives"><%- __('menu.archives') %></a></li>
     
 ## 可以客製化設定theme的 _config.yml
 
