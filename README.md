@@ -29,8 +29,8 @@ This project use ejs as template.
 - [語言選擇](#語言選擇)
 - [加入文章搜尋功能 Search function](#加入文章搜尋功能-search-function)
 - [加入新的page - about](#加入新的page---about)
-- 
-![](https://raw.githubusercontent.com/weitsung50110/hexo-theme-animal/main/github_img/a6.png)
+
+![](https://raw.githubusercontent.com/weitsung50110/hexo-theme-animal/main/github_img/Animal2.png)
 
 利用 EJS ，將共用的 HTML 代碼（如頁眉、頁腳、導航條等）抽象成單獨的模板文件，
 
