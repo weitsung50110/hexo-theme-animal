@@ -125,7 +125,7 @@ pre code {
 
 /* 超連結樣式 */
 .post a {
-  color: #ff7ae2; /* 連結顏色 */
+  color: #d63384; /* 連結顏色 */
   text-decoration: none; /* 去掉下劃線 */
   transition: color 0.s ease; /* 顏色過渡效果 */
   font-weight: bold;

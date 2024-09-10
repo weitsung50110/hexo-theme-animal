@@ -7,7 +7,7 @@
     <div class="post-meta">
       <% if (page.tags && page.tags.length > 0) { %>
         <div class="post-tags">
-          <span>Tags:</span>
+          <span><%- __('menu.tags') %>:</span>
           <ul>
             <% page.tags.forEach(function(tag) { %>
               <li><a href="<%= tag.permalink %>"><%= tag.name %></a></li>
@@ -18,7 +18,7 @@
 
       <% if (page.categories && page.categories.length > 0) { %>
         <div class="post-categories">
-          <span>Categories:</span>
+          <span><%- __('menu.categories') %>:</span>
           <ul>
             <% page.categories.forEach(function(category) { %>
               <li><a href="<%= category.permalink %>"><%= category.name %></a></li>
