@@ -1,30 +1,37 @@
-<!-- 社群連結側邊欄 -->
-<div class="social-sidebar">
-  <h3><%- __('menu.follow_me') %></h3>
-  <a href="<%- theme.menu.GitHub1 %>" target="_blank"><i class="fab fa-github"></i><%- theme.menu.GitHub2 %></a>
-  <a href="<%- theme.menu.Medium1 %>" target="_blank"><i class="fab fa-medium"></i><%- theme.menu.Medium2 %></a>
+<!-- 彈跳視窗容器 -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close" id="closeButton">&times;</span>
+    <div class="modal-sections">
+      <div class="social-links-section">
+        <h3><%- __('menu.follow_me') %></h3>
+        <div class="social-links">
+          <a href="<%- theme.menu.GitHub1 %>" target="_blank"><i class="fab fa-github"></i><%- theme.menu.GitHub2 %></a>
+          <a href="<%- theme.menu.Medium1 %>" target="_blank"><i class="fab fa-medium"></i><%- theme.menu.Medium2 %></a>
+        </div>
+      </div>
 
-  <% if (site.categories.length > 0) { %>
-    <div class="categories">
-      <h3><%- __('menu.categories') %></h3>
-      <ul>
-        <% site.categories.forEach(function(category) { %>
-          <li><a href="<%- category.permalink %>"><%- category.name %></a></li>
-        <% }) %>
-      </ul>
+      <% if (site.categories.length > 0) { %>
+        <div class="categories-section">
+          <h3><%- __('menu.categories') %></h3>
+          <div class="categories-container">
+            <% site.categories.forEach(function(category) { %>
+              <a href="<%- category.permalink %>" class="category-item"><%- category.name %></a>
+            <% }) %>
+          </div>
+        </div>
+      <% } %>
+
+      <% if (site.tags.length > 0) { %>
+        <div class="tags-section">
+          <h3><%- __('menu.tags') %></h3>
+          <div class="tags-container">
+            <% site.tags.forEach(function(tag) { %>
+              <a href="<%- tag.permalink  %>" class="tag-item"><%- tag.name %></a>
+            <% }) %>
+          </div>
+        </div>
+      <% } %>
     </div>
-  <% } %>
-  
-  <!-- Tags -->
-<% if (site.tags.length > 0) { %>
-  <div class="tags">
-    <h3><%- __('menu.tags') %></h3>
-    <ul>
-      <% site.tags.forEach(function(tag) { %>
-        <li><a href="<%- tag.permalink  %>"><%- tag.name %></a></li>
-      <% }) %>
-    </ul>
   </div>
-<% } %>
-
 </div>

@@ -106,7 +106,7 @@ code {
   background-color: #f8f8f8; /* 淺灰色背景 */
   border-radius: 3px;
   padding: 0.2em 0.4em;
-  font-size: 85%;
+  /* font-size: 95%; */
   color: #d63384; /* 程式碼顏色 */
 }
 
@@ -124,4 +124,18 @@ pre {
 pre code {
   background: transparent; /* 使內部程式碼塊背景透明 */
   color: inherit; /* 繼承父元素的顏色 */
+}
+
+/* 超連結樣式 */
+.post a {
+  color: #ff7ae2; /* 連結顏色 */
+  text-decoration: none; /* 去掉下劃線 */
+  transition: color 0.s ease; /* 顏色過渡效果 */
+  font-weight: bold;
+}
+
+.post a:hover,.post a:focus {
+  color: #7a00b3; /* 懸停和焦點時的顏色 */
+  text-decoration: underline; /* 懸停時顯示下劃線 */
+  font-weight: bold;
 }

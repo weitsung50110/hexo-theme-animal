@@ -9,6 +9,17 @@ header {
   position: relative;
 }
 
+header .logo2 {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 30%;
+  width: 15%;
+  height: 100%;
+  background-repeat: no-repeat;
+  /* opacity: 0.3; 設置透明度以便背景漸變顯示出來 */
+}
+
 /* Header 內容 */
 .header-content {
   display: flex;
@@ -23,6 +34,7 @@ header img {
 
 header h1 {
   margin: 0;
+  z-index: 1; 
 }
 
 header h1 a {
@@ -54,6 +66,7 @@ nav {
 .nav-top li {
   display: flex;
   align-items: center;
+  z-index: 2; 
 }
 
 .nav-top li a{
@@ -64,6 +77,7 @@ nav {
   border: none;
   padding: 10px;
   cursor: pointer;
+  z-index: 2; /* 確保 header 在背景層之下 */
 }
 
 .nav-top li a:hover{
@@ -128,6 +142,7 @@ nav {
   position: absolute;
   top: 10px;
   right: 10px;
+  z-index: 999;
 }
 
 /* 搜尋框樣式 */

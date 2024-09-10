@@ -1,6 +1,7 @@
 <article class="post">
   <h1><%= page.title %></h1>
-  <p class="post-date"><%- __('post.date') %><%= page.date %></p>
+  <!-- <p class="post-date"><%- __('post.date') %><%= page.date %></p> -->
+  <p class="post-date"><%- __('post.date') %><%= moment(page.date).tz('Asia/Taipei').format('YYYY-MM-DD HH:mm:ss') %></p>
   <p class="post-author"><%- __('post.author') %><%= page.author %></p>
   <% if (page.excerpt) { %>
       <div class="excerpt">
