@@ -155,5 +155,21 @@ hexo-theme-animal-site是我自己設定的專案名字，你需要根據你創�
         layout: post
         ---
 
-文章原是的hexo格式放在這裡，可以參考!
+文章原始的hexo格式放在這個repo中，可以參考!
 https://github.com/weitsung50110/hexo-theme-animal_repo
+
+## 文章的時區設定
+希望在 Hexo 的模板中顯示正確的日期時間格式，並且希望顯示特定的時區（例如台北時間）
+
+1 確保你已經安裝了 moment-timezone
+
+      npm install moment-timezone --save
+
+2 修改 EJS 模板的post.ejs
+
+      <article class="post">
+        <h1><%= page.title %></h1>
+        <!-- <p class="post-date"><%- __('post.date') %><%= page.date %></p> -->
+        <p class="post-date"><%- __('post.date') %><%= moment(page.date).tz('Asia/Taipei').format('YYYY-MM-DD HH:mm:ss') %></p>
+
+如果你要更改成其他的時區，更改`tz('Asia/Taipei')`就好了~
