@@ -9,7 +9,7 @@
 @import url('style_post.css');
 @import url('style_sidebar.css');
 @import url('style_search.css');
-
+@import url('style_post_tags_categories.css');
 
 /* 響應式設計 */
 @media (max-width: 768px) {
@@ -102,6 +102,12 @@
     .social-sidebar {
         width: 25%;
       }
+
+    #toggleButton {
+      width: 50px; /* 在小屏幕上設置較小的寬度 */
+      height: 50px; /* 在小屏幕上設置較小的高度 */
+      font-size: 0.9em; /* 減少字體大小 */
+    }
   }
   
   @media (max-width: 480px) {
@@ -139,5 +145,10 @@
     .social-sidebar {
         width: 30%;
       }
-
+    
+    #toggleButton {
+      width: 40px; /* 在非常小的屏幕上設置最小的寬度 */
+      height: 45px; /* 在非常小的屏幕上設置最小的高度 */
+      font-size: 0.6em; /* 進一步減少字體大小 */
+    }
   }

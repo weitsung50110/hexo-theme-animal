@@ -3,6 +3,31 @@
   <!-- <p class="post-date"><%- __('post.date') %><%= page.date %></p> -->
   <p class="post-date"><%- __('post.date') %><%= moment(page.date).tz('Asia/Taipei').format('YYYY-MM-DD HH:mm:ss') %></p>
   <p class="post-author"><%- __('post.author') %><%= page.author %></p>
+  <% if (page.tags && page.tags.length > 0 || page.categories && page.categories.length > 0) { %>
+    <div class="post-meta">
+      <% if (page.tags && page.tags.length > 0) { %>
+        <div class="post-tags">
+          <span>Tags:</span>
+          <ul>
+            <% page.tags.forEach(function(tag) { %>
+              <li><a href="<%= tag.permalink %>"><%= tag.name %></a></li>
+            <% }); %>
+          </ul>
+        </div>
+      <% } %>
+
+      <% if (page.categories && page.categories.length > 0) { %>
+        <div class="post-categories">
+          <span>Categories:</span>
+          <ul>
+            <% page.categories.forEach(function(category) { %>
+              <li><a href="<%= category.permalink %>"><%= category.name %></a></li>
+            <% }); %>
+          </ul>
+        </div>
+      <% } %>
+    </div>
+  <% } %>
   <% if (page.excerpt) { %>
       <div class="excerpt">
           <p><%= page.excerpt %></p>

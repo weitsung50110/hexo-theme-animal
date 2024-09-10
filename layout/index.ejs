@@ -9,10 +9,35 @@
   <% page.posts.each(function(post) { %>
     <article class="index_post">
       <h2><a href="<%= post.permalink %>"><%= post.title %></a></h2>
-      <p class="post-date"><%= post.date.format('MMMM DD, YYYY') %></p>
+      <p class="post-date"><%= post.date.format('YYYY-MM-DD') %></p>
       <div class="excerpt">
         <%- post.excerpt %>
       </div>
+      
+      <!-- tags -->
+      <% if (post.tags && post.tags.length > 0) { %>
+        <div class="post-tags">
+          <span>Tags:</span>
+          <ul>
+            <% post.tags.forEach(function(tag) { %>
+              <li><a href="<%= tag.permalink %>"><%= tag.name %></a></li>
+            <% }); %>
+          </ul>
+        </div>
+      <% } %>
+
+      <!-- categories -->
+      <% if (post.categories && post.categories.length > 0) { %>
+        <div class="post-categories">
+          <span>Categories:</span>
+          <ul>
+            <% post.categories.forEach(function(category) { %>
+              <li><a href="<%= category.permalink %>"><%= category.name %></a></li>
+            <% }); %>
+          </ul>
+        </div>
+      <% } %>
+
       <a class="read-more" href="<%= post.permalink %>">Read More</a>
     </article>
   <% }); %>

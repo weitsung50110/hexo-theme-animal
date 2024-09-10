@@ -53,14 +53,11 @@
 .post-date, .post-author{
   font-style: italic;
   color: #666;
-  margin: 10px 0;
-  padding: 5px;
 }
 
 .post .excerpt{
   color: #454242;
   line-height: 1;
-  padding: 5px;
 }
 
 /* 內容區域 */

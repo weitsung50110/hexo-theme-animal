@@ -1,0 +1,46 @@
+/* 文章的 Tags 和 Categories 區域 */
+.post-meta {
+  display: flex; /* 使用 flexbox */
+  flex-wrap: wrap; /* 支持換行，以防內容過多 */
+  align-items: center; /* 垂直居中對齊 */
+  gap: 20px; /* 標題和標籤/類別之間的間距 */
+  margin-bottom: 10px;
+}
+
+.post-tags, .post-categories {
+  display: flex;
+  align-items: center;
+}
+
+.post-tags span, .post-categories span {
+  font-size: 1.1em;
+  color: #333;
+  margin: 0;
+  margin-right: 10px; /* 給標題和標籤/類別之間添加間距 */
+}
+
+.post-tags ul, .post-categories ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* 使用 flexbox 使標籤和類別水平排列 */
+  gap: 10px; /* 標籤和類別之間的間距 */
+}
+
+.post-tags li, .post-categories li {
+  margin: 0;
+}
+
+.post-tags a, .post-categories a {
+  text-decoration: none;
+  background: #f9f5fb;
+  color: #cd6000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.1s, color 0.1s;
+}
+
+.post-tags a:hover, .post-categories a:hover {
+  background: #f7e4fc;
+  color: #633000;
+}

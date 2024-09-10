@@ -24,8 +24,7 @@
 
 /* 標題樣式 */
 .index_post h2 {
-  font-size: 2em;
-  margin-bottom: 15px;
+  font-size: 1.7em;
   color: #333;
   text-align: center;
 }
@@ -56,18 +55,16 @@
   color: #555;
   line-height: 1.8;
   text-align: center;
-  margin: 20px 0;
 }
 
 /* 讀更多連結 */
 .index_post .read-more {
   display: block;
   text-align: center;
-  font-size: 1.2em;
-  color: #4fc3f7;
+  font-size: 1em;
+  color: #3773ff;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 20px;
 }
 
 .index_post .read-more:hover {
