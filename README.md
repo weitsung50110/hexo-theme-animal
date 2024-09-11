@@ -23,6 +23,7 @@ This project use ejs as template.
     - `tag.ejs`：標籤頁佈局
 
 #### 目錄Table of Contents
+- [安裝的插件版本](#安裝的插件版本)
 - [如何使用主題?](#如何使用主題)
 - [重點 - 需要設定在hexo根目錄的_config.yml](#重點---需要設定在hexo根目錄的_configyml)
 - [可以客製化設定theme的_config.yml](#可以客製化設定theme的_configyml)
@@ -35,6 +36,31 @@ This project use ejs as template.
 利用 EJS ，將共用的 HTML 代碼（如頁眉、頁腳、導航條等）抽象成單獨的模板文件，
 
 然後在主要模板中包含這些文件。這樣可以避免在每個頁面中重複寫相同的 HTML 結構。
+
+## 安裝的插件版本
+### Node.js 版本，我裡面是安裝20.16.0版本
+| REPOSITORY | TAG     | IMAGE ID      | CREATED      | SIZE  |
+|------------|---------|---------------|--------------|-------|
+| node       | 20.16.0 | 1a8e51cfa7a5  | 6 weeks ago  | 1.1GB |
+
+### npm 依賴項，npm裡面還有安裝這些依賴
+以下是 `npm list --depth=0` 輸出的依賴項列表：
+
+- **Hexo 及相關插件**
+  - `hexo` @7.3.0
+  - `hexo-generator-archive` @2.0.0
+  - `hexo-generator-category` @2.0.0
+  - `hexo-generator-index` @4.0.0
+  - `hexo-generator-searchdb` @1.4.1
+  - `hexo-generator-tag` @2.0.0
+  - `hexo-renderer-ejs` @2.0.0
+  - `hexo-renderer-marked` @6.3.0
+  - `hexo-renderer-stylus` @3.0.1
+  - `hexo-server` @3.0.0
+  - `hexo-theme-landscape` @1.0.0
+
+- **Moment.js 及其時區支持**
+  - `moment-timezone` @0.5.45
 
 ## 如何使用主題?
 1. 請先把我的主題clone到本地。
