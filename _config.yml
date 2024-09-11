@@ -18,3 +18,7 @@ menu:
   Medium1: "https://medium.com/@weiberson"
   Medium2: "Medium"
 
+sidebar:
+  Author: "Weiberson Chang"
+  Auther_descrip: "我目前是AI軟體工程師"
+  other: "GitHub: weitsung50110"

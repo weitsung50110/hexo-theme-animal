@@ -136,3 +136,34 @@ pre code {
   text-decoration: underline; /* 懸停時顯示下劃線 */
   font-weight: bold;
 }
+
+/* 表格整體樣式 */
+table {
+  width: 100%;
+  border-collapse: collapse; /* 去掉表格間距 */
+  margin-bottom: 1em; /* 底部邊距 */
+}
+
+/* 表格標題行樣式 */
+th {
+  background-color: #ffedd8; /* 表格標題背景顏色 */
+  color: rgb(130, 0, 0); /* 標題文字顏色 */
+  padding: 10px;
+  text-align: left; /* 左對齊 */
+}
+
+/* 表格內容行樣式 */
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd; /* 下邊框 */
+}
+
+/* 表格內容行的偶數行背景顏色 */
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* 偶數行背景顏色 */
+}
+
+/* 表格內容行的懸停效果 */
+tr:hover {
+  background-color: #e0e0e0; /* 懸停背景顏色 */
+}

@@ -1,125 +1,56 @@
-/* 彈跳視窗的樣式 */
-.modal {
-  display: none; /* 初始隱藏 */
+#sidebar {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: -250px; /* 初始位置在屏幕外 */
+  width: 250px;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.5); /* 半透明背景 */
-  z-index: 1000; /* 確保在最上層 */
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto; /* 上下距離視窗邊緣 5% */
+  background-color: #333;
+  color: white;
+  transition: all 0.3s ease; /* 讓動畫變化平滑 */
   padding: 20px;
-  border: 1px solid #888;
-  width: 90%; /* 可以根據需要調整寬度 */
-  max-width: 900px; /* 最大寬度 */
-  border-radius: 10px; /* 圓角邊框 */
-  position: relative; /* 相對定位 */
-  display: flex;
-  flex-direction: column; /* 垂直排列 */
+  z-index: 1000; /* 確保側邊欄在最上層 */
 }
 
-/* 關閉按鈕 */
-.close {
-  color: #aaa;
-  font-size: 36px;
-  font-weight: bold;
-  position: absolute;
-  top: 0px;
-  right: 10px;
+#sidebar h2 {
+  margin-top: 0;
+}
+
+#sidebar #close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
   cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
+/* 作者信息樣式 */
+.author-info {
+  text-align: center; /* 圖片和文字居中 */
 }
 
-/* 彈跳視窗內的橫向區域 */
-.modal-sections {
-  display: flex;
-  flex-wrap: wrap; /* 自動換行 */
-  gap: 20px; /* 各區域之間的間距 */
+.author_photo {
+  width: 100px; /* 設置圖片寬度 */
+  height: 100px; /* 設置圖片高度 */
+  border-radius: 50%; /* 圓形圖片 */
+  object-fit: cover; /* 確保圖片不變形 */
+  margin-bottom: 15px; /* 圖片和文字之間的間距 */
 }
 
-.social-links-section, .categories-section, .tags-section {
-  flex: 1 1 30%; /* 基於容器大小自動調整 */
-  background-color: #f9f9f9; /* 背景顏色 */
-  border-radius: 5px; /* 圓角邊框 */
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 輕微的陰影 */
+body{
+  transition: margin-left 0.3s ease; /* 讓主內容區域的移動平滑 */
+  /* padding: 20px; */
 }
 
-/* 標題樣式 */
-.modal-sections h3 {
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: #333;
-}
-
-.modal-sections h3:hover {
-  background-color: #ffe2c2;
-}
-
-/* 社交連結樣式 */
-.social-links {
-  display: flex;
-  flex-direction: column;
-}
-
-.social-links a {
-  display: flex;
-  align-items: center; /* 使圖標和文字垂直居中 */
-  color: #f37100;
-  text-decoration: none;
-  margin-bottom: 10px;
-  transition: color 0.1s ease, transform 0.1s ease; /* 顏色和縮放過渡效果 */
-}
-
-.social-links a:hover {
-  color: #633000; /* 懸停時的顏色 */
-  transform: scale(1.02); /* 懸停時的縮放效果 */
-  font-weight: bold;
-  text-decoration: underline; /* 懸停時顯示下劃線 */
-}
-
-/* 類別和標籤區域 */
-.categories-container, .tags-container {
-  display: flex;
-  flex-wrap: wrap; /* 自動換行 */
-  gap: 10px; /* 項目之間的間距 */
-}
-
-.category-item, .tag-item {
-  background-color: #f9f5fb;
-  border-radius: 20px; /* 圓角 */
-  padding: 8px 15px;
-  color: #cd6000;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease; /* 背景顏色和顏色過渡效果 */
-}
-
-.category-item:hover, .tag-item:hover {
-  background-color: #f7e4fc;
-  color: #633000;
-  font-weight: bold;
-}
 
 
 
 /* 固定在網頁左邊中間的按鈕 */
-#toggleButton {
+#open-btn {
   position: fixed; /* 固定定位 */
   left: 2px; /* 距離左邊 20 像素，根據需求調整 */
-  top: 94%; /* 垂直中心對齊 */
+  bottom: -15px; /* 垂直中心對齊 */
   transform: translateY(-50%); /* 垂直居中對齊 */
-  background-color: #fcd3fa; /* 按鈕背景顏色 */
+  background-color: #effdff;
   color: #000000; /* 按鈕文字顏色 */
   border: 2px dashed  #70260e; /* 設置邊框樣式和顏色 */
   padding: 3px 3px; /* 內邊距 */
@@ -132,6 +63,6 @@
   height: 60px; /* 設置按鈕高度 */
 }
 
-#toggleButton:hover {
-  background-color: #fab9fc; /* 懸停時的背景顏色 */
+#open-btn:hover {
+  background-color: #daf6fa; /* 滑鼠懸停時的顏色變化 */
 }

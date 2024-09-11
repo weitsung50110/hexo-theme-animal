@@ -1,16 +1,12 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   // 取得切換按鈕、彈跳視窗和關閉按鈕
-  const toggleButton = document.querySelector('#toggleButton');
   const modal = document.querySelector('#modal');
   const closeButton = document.querySelector('#closeButton');
-  const toggleButton2 = document.querySelector('#toggleButton2');
+  const tag_toggleButton = document.querySelector('#tag_toggleButton');
 
   // 顯示彈跳視窗
-  toggleButton.addEventListener('click', () => {
-    modal.style.display = 'block';
-  });
-  toggleButton2.addEventListener('click', () => {
+  tag_toggleButton.addEventListener('click', () => {
     modal.style.display = 'block';
   });
 

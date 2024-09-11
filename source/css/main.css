@@ -7,9 +7,10 @@
 @import url('style_header.css');
 @import url('style_index_post.css');
 @import url('style_post.css');
-@import url('style_sidebar.css');
+@import url('style_popup_tag.css');
 @import url('style_search.css');
 @import url('style_post_tags_categories.css');
+@import url('style_sidebar.css');
 
 /* 響應式設計 */
 @media (max-width: 768px) {
@@ -99,15 +100,16 @@
         background: #f8f9fa;
     }
 
-    .social-sidebar {
-        width: 25%;
-      }
-
-    #toggleButton {
+    #open-btn {
       width: 50px; /* 在小屏幕上設置較小的寬度 */
       height: 50px; /* 在小屏幕上設置較小的高度 */
       font-size: 0.9em; /* 減少字體大小 */
     }
+
+    #sidebar {
+      width: 200px; /* 在小屏幕上縮小側邊欄的寬度 */
+    }
+
   }
   
   @media (max-width: 480px) {
@@ -142,13 +144,13 @@
       padding: 5px;
     }
 
-    .social-sidebar {
-        width: 30%;
-      }
-    
-    #toggleButton {
-      width: 40px; /* 在非常小的屏幕上設置最小的寬度 */
+    #open-btn {
+      width: 45px; /* 在非常小的屏幕上設置最小的寬度 */
       height: 45px; /* 在非常小的屏幕上設置最小的高度 */
       font-size: 0.6em; /* 進一步減少字體大小 */
+    }
+
+    #sidebar {
+      width: 180px; /* 在更小屏幕上進一步縮小側邊欄的寬度 */
     }
   }
