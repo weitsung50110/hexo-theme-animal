@@ -1,0 +1,61 @@
+/* 目錄樣式 */
+.toc {
+  position: fixed;
+  top: 24%;
+  right: -100%; /* 默認隱藏 */
+  width: 250px;
+  height: 80%; /* 調整為80%以留出一些空間 */
+  background: #f9f9f9;
+  border-left: 1px solid #ddd;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  z-index: 1000; /* 確保在最上層 */
+  transition: right 0.3s ease; /* 平滑顯示/隱藏 */
+}
+
+/* 目錄標題 */
+.toc h2 {
+  margin-top: 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 1em; /* 增大標題字體 */
+}
+
+/* 目錄列表 */
+.toc ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc ul li a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 0.9em; /* 設定字體大小 */
+  display: block; /* 使鏈接填滿整個列表項 */
+  padding: 8px; /* 增加內邊距 */
+  border-radius: 4px; /* 圓角效果 */
+}
+
+.toc ul li a:hover {
+  text-decoration: underline;
+  background: #e9ecef; /* 背景顏色變化 */
+}
+
+/* 按鈕樣式 (如果有用於顯示/隱藏目錄的按鈕) */
+.toc-toggle-btn {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  color: rgb(176, 0, 141);
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 9999;
+  border-radius: 5px;
+}
+
+.toc-toggle-btn:hover {
+  background-color: #d5e9ff;
+}

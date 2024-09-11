@@ -31,6 +31,10 @@ main ul li {
   margin-bottom: 10px; /* 列表項目下方間距 */
 }
 
+main ul li:hover {
+  background-color: rgb(253, 241, 226);
+}
+
 main ul li:last-child {
   border-bottom: none; /* 去掉最後一項的分隔線 */
 }

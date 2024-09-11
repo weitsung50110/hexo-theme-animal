@@ -11,6 +11,7 @@
 @import url('style_search.css');
 @import url('style_post_tags_categories.css');
 @import url('style_sidebar.css');
+@import url('style_toc.css');
 
 /* 響應式設計 */
 @media (max-width: 768px) {
@@ -58,7 +59,7 @@
     .nav-top {
       position: relative; /* 固定在頁面上 */
     }
-    
+
     .mobile-nav.active {
         display: block; /* 顯示菜單 */
     }
@@ -96,8 +97,8 @@
     }
 
     #open-btn {
-      width: 50px; /* 在小屏幕上設置較小的寬度 */
-      height: 50px; /* 在小屏幕上設置較小的高度 */
+      width: 60px; /* 在小屏幕上設置較小的寬度 */
+      height: 60px; /* 在小屏幕上設置較小的高度 */
       font-size: 0.9em; /* 減少字體大小 */
     }
 
@@ -105,6 +106,15 @@
       width: 200px; /* 在小屏幕上縮小側邊欄的寬度 */
     }
 
+
+    .toc {
+      display: none; /* 隱藏目錄 */
+    }
+    
+    .toc.show {
+      display: block; /* 顯示目錄 */
+      right: 0; /* 顯示位置 */
+    }
   }
   
   @media (max-width: 480px) {
@@ -140,12 +150,34 @@
     }
 
     #open-btn {
-      width: 45px; /* 在非常小的屏幕上設置最小的寬度 */
-      height: 45px; /* 在非常小的屏幕上設置最小的高度 */
+      width: 55px; /* 在非常小的屏幕上設置最小的寬度 */
+      height: 55px; /* 在非常小的屏幕上設置最小的高度 */
       font-size: 0.6em; /* 進一步減少字體大小 */
     }
 
     #sidebar {
       width: 180px; /* 在更小屏幕上進一步縮小側邊欄的寬度 */
+    }
+
+
+    .toc {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: auto; /* 高度自動調整 */
+      box-shadow: none; /* 移除陰影 */
+      border-left: none; /* 移除邊框 */
+      border-top: 1px solid #ddd; /* 增加上邊框 */
+      background: #f9f9f9;
+    }
+  
+    .toc ul {
+      padding: 10px; /* 增加內邊距 */
+    }
+  
+    .toc ul li a {
+      font-size: 0.9em; /* 調整字體大小 */
+      padding: 12px; /* 增加內邊距 */
     }
   }

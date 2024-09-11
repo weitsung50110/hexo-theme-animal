@@ -13,7 +13,6 @@
 
 /* 鼠標懸停效果 */
 .post:hover {
-  transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -70,6 +69,7 @@
   border-radius: 8px;
   /* font-size: 18px; */
   line-height: 1.8;
+  margin-right: 250px; /* 讓內容區域有足夠的邊距，避免與右側目錄重疊 */
 }
 
 /* 內容中的圖片樣式 */
