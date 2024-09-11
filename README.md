@@ -39,6 +39,10 @@ This project use ejs as template.
 
 ## 安裝的插件版本
 ### Node.js 版本，我裡面是安裝20.16.0版本
+我也有上傳到Docker hub，有需要可以直接下載! https://hub.docker.com/repository/docker/weitsung50110/hexo-theme/tags
+
+    docker pull weitsung50110/hexo-theme:v1.0
+
 | REPOSITORY | TAG     | IMAGE ID      | CREATED      | SIZE  |
 |------------|---------|---------------|--------------|-------|
 | node       | 20.16.0 | 1a8e51cfa7a5  | 6 weeks ago  | 1.1GB |
