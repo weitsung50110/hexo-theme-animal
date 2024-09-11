@@ -50,7 +50,7 @@ body{
   left: 2px; /* 距離左邊 20 像素，根據需求調整 */
   bottom: -15px; /* 垂直中心對齊 */
   transform: translateY(-50%); /* 垂直居中對齊 */
-  background-color: #effdff;
+  background-color: rgba(0, 0, 0, 0.2);
   color: #000000; /* 按鈕文字顏色 */
   border: 2px dashed  #70260e; /* 設置邊框樣式和顏色 */
   padding: 3px 3px; /* 內邊距 */

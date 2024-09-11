@@ -56,11 +56,16 @@ nav {
 
 .nav-top {
   list-style: none;
+  position: fixed; /* 固定在頁面上 */
+  right: 0; /* 距離頁面左側 */
+  top: 0; /* 距離頁面頂部 */
+  background-color: rgba(0, 0, 0, 0.3); /* 半透明底色 */
   padding: 0;
   margin: 0;
   display: flex;
   align-items: center;
   gap: 10px;
+  z-index: 1000;
 }
 
 .nav-top li {
@@ -77,7 +82,7 @@ nav {
   border: none;
   padding: 10px;
   cursor: pointer;
-  z-index: 2; /* 確保 header 在背景層之下 */
+  z-index: 2; 
 }
 
 .nav-top li a:hover{

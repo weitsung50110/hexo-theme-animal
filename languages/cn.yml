@@ -7,6 +7,7 @@ menu:
   tags: '標籤'
   categories: '類別'
   search: '搜尋'
+  search-results: '搜尋結果'
 
 post:
   date: '日期：'

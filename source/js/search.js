@@ -1,7 +1,9 @@
+
 document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('search-input');
   const searchResults = document.getElementById('search-results');
-  
+  var modal = document.getElementById('search-modal');
+
   // 設置 JSON 文件的路徑
   const searchDataUrl = '/search.json';
 
@@ -40,16 +42,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('search-button').addEventListener('click', function() {
       const query = searchInput.value.trim();
+      modal.style.display = 'flex';
+      setTimeout(() => {
+        modal.classList.add('show');
+      }, 10); // 小延遲以觸發動畫
       if (query) {
         performSearch(query);
       }
     });
-
+    
     searchInput.addEventListener('keypress', function(e) {
       if (e.key === 'Enter') {
         document.getElementById('search-button').click();
       }
     });
+
+    document.getElementById('search-close').addEventListener('click', function() {
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 300); // 等待動畫完成後再隱藏
+    });
+    // 點擊彈跳視窗外部關閉彈跳視窗
+  window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
   })
   .catch(error => console.error('搜尋資料載入錯誤:', error));
 

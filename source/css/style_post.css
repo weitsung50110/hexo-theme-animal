@@ -167,3 +167,9 @@ tr:nth-child(even) {
 tr:hover {
   background-color: #e0e0e0; /* 懸停背景顏色 */
 }
+
+/* 當表格超出容器寬度時顯示滾動條 */
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* 平滑滾動 */
+}

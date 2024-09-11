@@ -57,6 +57,16 @@
                   });
               });
           });
+
+          document.addEventListener('DOMContentLoaded', function() {
+            const tables = document.querySelectorAll('article table');
+            tables.forEach(table => {
+              const container = document.createElement('div');
+              container.className = 'table-container';
+              table.parentNode.insertBefore(container, table);
+              container.appendChild(table);
+            });
+          });
       </script>
   </div>
 </article>

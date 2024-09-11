@@ -4,7 +4,7 @@
     <% site.posts.each(function(post) { %>
       <li>
         <a href="<%- post.permalink %>"><%- post.title %></a>
-        <span class="date"> - <%= post.date.format('MMMM YYYY') %></span>
+        <span class="date"> - <%= post.date.format('YYYY-MM-DD') %></span>
       </li>
     <% }) %>
   </ul>

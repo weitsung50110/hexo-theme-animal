@@ -7,6 +7,7 @@ menu:
   tags: 'Tags'
   categories: 'Categories'
   search: 'Search'
+  search-results: 'Search results'
 
 post:
   date: 'Date：'
