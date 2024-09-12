@@ -116,21 +116,15 @@
     }
 
     .toc-toggle-btn {
-      position: fixed;
       top: 50%;
-      right: 10px;
-      background: rgba(0, 0, 0, 0.2);
-      color: rgb(176, 0, 141);
-      font-weight: bold;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      z-index: 9999;
-      border-radius: 5px;
     }
 
     .toc-toggle-btn:hover {
       background-color: rgba(0, 0, 0, 0.2); /* 恢復原本的背景色 */
+    }
+
+    .scroll-to-top-btn:hover {
+      background-color: rgba(0, 0, 0, 0.2);
     }
   }
   
@@ -176,6 +170,9 @@
       width: 180px; /* 在更小屏幕上進一步縮小側邊欄的寬度 */
     }
 
+    #sidebar #close-btn {
+      right: 5px; /* 距離右邊20px */
+    }
 
     .toc {
       position: fixed;

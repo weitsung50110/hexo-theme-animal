@@ -21,6 +21,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+
+    
+    // 檢查是否存在特定元素來決定是否顯示側邊欄
+    function shouldShowSidebar() {
+        return document.getElementById('home') !== null;
+    }
+
+    if (isDesktop() && shouldShowSidebar()) {
+        // 在桌面模式下，推動主內容區域
+        sidebar.style.left = '0'; // 顯示側邊欄
+        bodyElement.style.marginLeft = sidebar.style.left === '0px' ? '250px' : '0';
+    } 
+
+
+
+
     openBtn.addEventListener('click', function() {
         sidebar.style.left = '0'; // 顯示側邊欄
         if (isDesktop()) {

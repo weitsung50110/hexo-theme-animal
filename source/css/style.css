@@ -69,3 +69,26 @@ footer p {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.05); }
 }
+
+
+
+/* 返回頂部按鈕樣式 */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgb(255, 131, 131);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none; /* 默認隱藏按鈕 */
+  z-index: 1000; /* 確保按鈕在最上層 */
+  font-size: 16px;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-to-top-btn:hover {
+  background-color: #d8fdfd;
+}

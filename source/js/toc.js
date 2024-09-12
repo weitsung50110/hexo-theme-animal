@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 桌面模式
         postElement.style.marginRight = '250px';
     }
-    
+
     // 點擊按鈕切換目錄顯示狀態
     tocToggle.addEventListener('click', () => {
         if (window.innerWidth <= 768) {
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             // 桌面模式
             toc.classList.toggle('close');
-            tocToggle.style.top = toc.classList.contains('close') ? '50%' : '90%';
+            tocToggle.style.top = toc.classList.contains('close') ? '50%' : '85.5%';
             postElement.style.marginRight = toc.classList.contains('close') ? '0' : '250px';
         }
     });

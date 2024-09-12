@@ -36,3 +36,23 @@ document.addEventListener('DOMContentLoaded', function () {
     mobileNav.classList.toggle('active');
   });
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
+
+  // 當頁面滾動時顯示/隱藏按鈕
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) { // 當滾動超過 300px 顯示按鈕
+          scrollToTopBtn.style.display = 'block';
+      } else {
+          scrollToTopBtn.style.display = 'none';
+      }
+  });
+
+  // 當點擊按鈕時，滾動到頁面頂部
+  scrollToTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});

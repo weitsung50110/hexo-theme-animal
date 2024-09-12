@@ -11,16 +11,38 @@
   z-index: 1000; /* 確保側邊欄在最上層 */
 }
 
+#sidebar a {
+  text-decoration: none;
+  background: #f9f5fb;
+  color: #cd6000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.1s, color 0.1s;
+}
+
+#sidebar a:hover, #sidebar a:hover {
+  background: #f7e4fc;
+  color: #633000;
+}
+
 #sidebar h2 {
   margin-top: 0;
 }
 
 #sidebar #close-btn {
+  position: absolute; /* 使用絕對定位 */
   background: none;
   border: none;
   color: white;
   font-size: 24px;
   cursor: pointer;
+  top: 2px; /* 距離頂部20px */
+  right: 10px; /* 距離右邊20px */
+}
+
+#sidebar #close-btn:hover {
+  background:#633000;
+  color: rgb(255, 232, 249);
 }
 
 /* 作者信息樣式 */
