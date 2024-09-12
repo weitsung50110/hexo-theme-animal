@@ -42,21 +42,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const toc = document.getElementById('toc');
-    const tocToggle = document.getElementById('toc-toggle');
-
+    const tocToggle = document.getElementById('toc-toggle-btn');
+    const postElement = document.querySelector('.post');
+    
+    if (window.innerWidth > 768) {
+        // 桌面模式
+        postElement.style.marginRight = '250px';
+    }
+    
     // 點擊按鈕切換目錄顯示狀態
     tocToggle.addEventListener('click', () => {
         if (window.innerWidth <= 768) {
             // 手機模式
             toc.classList.toggle('show');
         } else {
-            if (toc.style.right === '-100%' || toc.style.right === '') {
-                toc.style.right = '0'; // 顯示目錄
-                tocToggle.style.top = '90%'; // 將按鈕設置為垂直居中
-            } else {
-                toc.style.right = '-100%'; // 隱藏目錄
-                tocToggle.style.top = '50%'; // 將按鈕設置為垂直居中
-            }
+            // 桌面模式
+            toc.classList.toggle('close');
+            tocToggle.style.top = toc.classList.contains('close') ? '50%' : '90%';
+            postElement.style.marginRight = toc.classList.contains('close') ? '0' : '250px';
         }
     });
 });

@@ -12,3 +12,6 @@ menu:
 post:
   date: 'Date：'
   author: 'Author：'
+
+float:
+  toc: 'Contents'

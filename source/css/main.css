@@ -113,7 +113,24 @@
     
     .toc.show {
       display: block; /* 顯示目錄 */
-      right: 0; /* 顯示位置 */
+    }
+
+    .toc-toggle-btn {
+      position: fixed;
+      top: 50%;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.2);
+      color: rgb(176, 0, 141);
+      font-weight: bold;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 9999;
+      border-radius: 5px;
+    }
+
+    .toc-toggle-btn:hover {
+      background-color: rgba(0, 0, 0, 0.2); /* 恢復原本的背景色 */
     }
   }
   

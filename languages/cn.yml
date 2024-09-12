@@ -12,3 +12,6 @@ menu:
 post:
   date: '日期：'
   author: '作者：'
+
+float:
+  toc: '目錄'

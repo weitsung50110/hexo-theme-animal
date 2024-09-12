@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var modal = document.getElementById('search-modal');
 
   // 設置 JSON 文件的路徑
+  // const searchDataUrl = '/hexo-theme-animal-site/search.json';
   const searchDataUrl = '/search.json';
 
   // 載入 JSON 數據

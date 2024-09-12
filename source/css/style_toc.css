@@ -2,7 +2,7 @@
 .toc {
   position: fixed;
   top: 24%;
-  right: -100%; /* 默認隱藏 */
+  right: 0; /* 默認隱藏 */
   width: 250px;
   height: 80%; /* 調整為80%以留出一些空間 */
   background: #f9f9f9;
@@ -44,7 +44,7 @@
 /* 按鈕樣式 (如果有用於顯示/隱藏目錄的按鈕) */
 .toc-toggle-btn {
   position: fixed;
-  top: 50%;
+  top: 90%;
   right: 10px;
   background: rgba(0, 0, 0, 0.2);
   color: rgb(176, 0, 141);
@@ -58,4 +58,12 @@
 
 .toc-toggle-btn:hover {
   background-color: #d5e9ff;
+}
+
+.toc{
+  display: block;
+}
+
+.toc.close {
+  display: none;
 }

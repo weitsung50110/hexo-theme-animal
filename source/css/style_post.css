@@ -168,6 +168,15 @@ tr:hover {
   background-color: #e0e0e0; /* 懸停背景顏色 */
 }
 
+/* Markdown 列表（如 - 或 *） */
+ul {
+  padding-left: 20px; /* 確保列表項目有適當的左邊距 */
+}
+
+ol {
+  padding-left: 30px; /* 確保有相同的左邊距 */
+}
+
 /* 當表格超出容器寬度時顯示滾動條 */
 .table-container {
   overflow-x: auto;
