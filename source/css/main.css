@@ -116,7 +116,7 @@
     }
 
     .toc-toggle-btn {
-      top: 50%;
+      bottom: 50%;
     }
 
     .toc-toggle-btn:hover {

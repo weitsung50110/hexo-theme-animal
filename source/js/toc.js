@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             // 桌面模式
             toc.classList.toggle('close');
-            tocToggle.style.top = toc.classList.contains('close') ? '50%' : '85.5%';
+            tocToggle.style.bottom = toc.classList.contains('close') ? '50%' : '55px';
             postElement.style.marginRight = toc.classList.contains('close') ? '0' : '250px';
         }
     });

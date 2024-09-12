@@ -44,7 +44,7 @@
 /* 按鈕樣式 (如果有用於顯示/隱藏目錄的按鈕) */
 .toc-toggle-btn {
   position: fixed;
-  top: 85.5%;
+  bottom: 55px;
   right: 10px;
   background: rgba(0, 0, 0, 0.2);
   color: rgb(176, 0, 141);
