@@ -60,7 +60,7 @@
 }
 
 /* 內容區域 */
-.content {
+.article-content {
   max-width: 100%;
   margin: 0;
   padding: 18px;
@@ -69,11 +69,11 @@
   border-radius: 8px;
   /* font-size: 18px; */
   line-height: 1.8;
-  margin-right: 250px; /* 讓內容區域有足夠的邊距，避免與右側目錄重疊 */
+
 }
 
 /* 內容中的圖片樣式 */
-.content img {
+.article-content img {
   max-width: 100%;
   height: auto;
   border-radius: 4px;
