@@ -4,7 +4,9 @@
     <% site.posts.each(function(post) { %>
       <li>
         <a href="<%- post.permalink %>"><%- post.title %></a>
-        <span class="date"> - <%= post.date.format('YYYY-MM-DD') %></span>
+        <span class="date"> - <%=
+          moment(post.date).tz('Asia/Taipei').format('YYYY-MM-DD')
+        %></span>
       </li>
     <% }) %>
   </ul>

@@ -9,7 +9,7 @@
   <% page.posts.each(function(post) { %>
     <article class="index_post">
       <h2><a href="<%= post.permalink %>"><%= post.title %></a></h2>
-      <p class="post-date"><%= post.date.format('YYYY-MM-DD') %></p>
+      <p class="post-date"><%= moment(post.date).tz('Asia/Taipei').format('YYYY-MM-DD') %></p>
       <div class="excerpt">
         <%- post.excerpt %>
       </div>
