@@ -4,7 +4,7 @@
   top: 24%;
   right: 0; /* 默認隱藏 */
   width: 250px;
-  height: 80%; /* 調整為80%以留出一些空間 */
+  height: 75%; /* 調整為80%以留出一些空間 */
   background: #f9f9f9;
   border-left: 1px solid #ddd;
   box-shadow: -2px 0 5px rgba(0,0,0,0.2);
