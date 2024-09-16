@@ -8,19 +8,24 @@ https://weitsung50110.github.io/hexo-theme-animal-site/
 https://github.com/weitsung50110/hexo-theme-animal-site
 
 This project use ejs as template.
-- `themes/hexo-theme-animal/`：主題目錄
-  - `layout/`：包含主題的佈局文件
-    - `_partial/`：包含頁面部件（如頁腳、頁首等）
-      - `footer.ejs`：頁腳部分
-      - `head.ejs`：頭部部分
-      - `header.ejs`：頁首部分
-      - `side_bar.ejs`：側邊欄部分
-    - `archive.ejs`：存檔頁佈局
-    - `category.ejs`：分類頁佈局
-    - `index.ejs`：首頁佈局
-    - `layout.ejs`：通用佈局
-    - `post.ejs`：文章頁佈局
-    - `tag.ejs`：標籤頁佈局
+### 樹狀圖
+    my-blog/
+    └── themes/
+    └── themes/hexo-theme-animal/
+            └── layout/
+            ├── _partial/
+            │   ├── footer.ejs
+            │   ├── head.ejs
+            │   ├── header.ejs
+            │   ├── popup_tag.ejs
+            │   ├── search-results.ejs
+            │   └── sidebar.ejs
+            ├── archive.ejs
+            ├── category.ejs
+            ├── index.ejs
+            ├── layout.ejs
+            ├── post.ejs
+            └── tag.ejs
 
 #### 目錄Table of Contents
 - [安裝的插件版本](#安裝的插件版本)
