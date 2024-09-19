@@ -35,6 +35,7 @@ This project use ejs as template.
 - [語言選擇](#語言選擇)
 - [加入文章搜尋功能 Search function](#加入文章搜尋功能-search-function)
 - [加入新的page - about](#加入新的page---about)
+- [SEO - 提供 Sitemap](#SEO---提供-Sitemap)
 
 ![](https://raw.githubusercontent.com/weitsung50110/hexo-theme-animal/main/github_img/a7.png)
 
@@ -208,3 +209,10 @@ https://github.com/weitsung50110/hexo-theme-animal_repo
         <p class="post-date"><%- __('post.date') %><%= moment(page.date).tz('Asia/Taipei').format('YYYY-MM-DD HH:mm:ss') %></p>
 
 如果你要更改成其他的時區，更改`tz('Asia/Taipei')`就好了~
+
+## SEO - 提供 Sitemap
+使用 Hexo 的內建功能生成 Sitemap，這樣搜尋引擎更容易找到你的頁面：
+
+    npm install hexo-generator-sitemap --save
+
+註冊並提交你的網站至 Google Search Console，這樣可以跟蹤你的網站表現，並獲得搜尋引擎的回饋。
