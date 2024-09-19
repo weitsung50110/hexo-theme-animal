@@ -7,11 +7,38 @@
   background-color: #333;
   color: white;
   transition: all 0.3s ease; /* 讓動畫變化平滑 */
-  padding: 20px;
+  padding-top: 10px;
   z-index: 1000; /* 確保側邊欄在最上層 */
+  overflow-y: auto; /* 垂直方向顯示滾動條 */
+  overflow-x: hidden; /* 水平方向不顯示滾動條 */
 }
 
-#sidebar a {
+/* 基本滾動條樣式 */
+#sidebar::-webkit-scrollbar {
+  width: 12px; /* 設定滾動條寬度 */
+}
+
+#sidebar::-webkit-scrollbar-track {
+  background: #2c2c2c; /* 滾動條背景顏色 */
+  border-radius: 10px; /* 滾動條背景圓角 */
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+  background: #555; /* 滾動條滑塊顏色 */
+  border-radius: 10px; /* 滾動條滑塊圓角 */
+  border: 3px solid #333; /* 滾動條滑塊邊框 */
+}
+
+#sidebar::-webkit-scrollbar-thumb:hover {
+  background: #888; /* 滾動條滑塊懸停顏色 */
+}
+
+
+.author-info span {
+  display: block; /* 使 span 元素顯示為區塊級元素，以便換行 */
+}
+
+#sidebar .author-info a {
   text-decoration: none;
   background: #f9f5fb;
   color: #cd6000;
@@ -20,13 +47,15 @@
   transition: background 0.1s, color 0.1s;
 }
 
-#sidebar a:hover, #sidebar a:hover {
+#sidebar .author-info a:hover{
   background: #f7e4fc;
   color: #633000;
 }
 
 #sidebar h2 {
   margin-top: 0;
+  line-height: 1.0; /* 設定合適的行高，根據需要調整 */
+
 }
 
 #sidebar #close-btn {
@@ -51,17 +80,18 @@
 }
 
 .author_photo {
-  width: 100px; /* 設置圖片寬度 */
-  height: 100px; /* 設置圖片高度 */
+  width: 150px; /* 設置圖片寬度 */
+  height: 150px; /* 設置圖片高度 */
   border-radius: 50%; /* 圓形圖片 */
   object-fit: cover; /* 確保圖片不變形 */
-  margin-bottom: 15px; /* 圖片和文字之間的間距 */
+  /* margin-bottom: 15px; 圖片和文字之間的間距 */
 }
 
 body{
   transition: margin-left 0.3s ease; /* 讓主內容區域的移動平滑 */
   /* padding: 20px; */
 }
+
 
 
 
