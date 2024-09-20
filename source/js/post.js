@@ -28,3 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
     container.appendChild(table);
   });
 });
+
+// 當你使用 > 符號來創建引用時，Markdown 轉換器會自動將這些內容轉換成<blockquote>標籤。
+document.addEventListener("DOMContentLoaded", function() {
+  const quotes = document.querySelectorAll("blockquote");
+  quotes.forEach(quote => {
+      quote.classList.add("custom-quote");
+  });
+});

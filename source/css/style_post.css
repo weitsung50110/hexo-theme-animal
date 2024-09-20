@@ -189,3 +189,12 @@ ol {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; /* 平滑滾動 */
 }
+
+
+/* 使用 > 符號來創建引用框 */
+.custom-quote {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-weight: bold;
+  font-size: larger;
+}
