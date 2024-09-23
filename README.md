@@ -36,6 +36,7 @@ This project use ejs as template.
 - [加入文章搜尋功能 Search function](#加入文章搜尋功能-search-function)
 - [加入新的page - about](#加入新的page---about)
 - [SEO - 提供 Sitemap](#SEO---提供-Sitemap)
+- [Pagination顯示所有文章](#Pagination顯示所有文章)
 
 ![](https://raw.githubusercontent.com/weitsung50110/hexo-theme-animal/main/github_img/a7.png)
 
@@ -216,3 +217,10 @@ https://github.com/weitsung50110/hexo-theme-animal_repo
     npm install hexo-generator-sitemap --save
 
 註冊並提交你的網站至 Google Search Console，這樣可以跟蹤你的網站表現，並獲得搜尋引擎的回饋。
+
+## Pagination顯示所有文章
+在root下面的_config.yml設置per_page為0:
+
+    # Pagination 設為 0 以顯示所有文章。
+    ## Set per_page to 0 to disable pagination 
+    per_page: 0
