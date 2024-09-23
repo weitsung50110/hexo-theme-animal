@@ -221,6 +221,17 @@ https://github.com/weitsung50110/hexo-theme-animal_repo
 ## Pagination顯示所有文章
 在root下面的_config.yml設置per_page為0:
 
-    # Pagination 設為 0 以顯示所有文章。
-    ## Set per_page to 0 to disable pagination 
-    per_page: 0
+Pagination設置per_page為0，來顯示所有文章
+
+1. 63行左右
+
+        ## Set per_page to 0 to disable pagination 
+        per_page: 0
+
+2. 88行左右
+
+        # per_page: Posts displayed per page. (0 = disable pagination)
+        # order_by: Posts order. (Order by date descending by default)
+        index_generator:
+          path: ''
+          per_page: 0
