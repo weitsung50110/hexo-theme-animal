@@ -1,72 +1,234 @@
 /* 整體文章區域 */
-.posts-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自适应列数 */
-  gap: 20px; /* 文章之间的间距 */
-}
-
-/* 每篇文章的樣式 */
-.index_post {
+.post {
   font-family: 'Arial', sans-serif;
   color: #333;
+  /* margin: 20px auto; */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
+  max-width: auto; /* 設置最大寬度，避免內容過於寬 */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* 鼠標懸停效果 */
-.index_post:hover {
-  transform: translateY(-5px);
+.post:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* 標題樣式 */
-.index_post h2 {
-  font-size: 1.7em;
-  color: #333;
-  text-align: center;
+.post h1 {
+  font-size: 2.5em;
+  margin-top: 1em; /* 調整標題與上方內容的距離 */
+  margin-bottom: 0.1em; /* 調整標題與下方內容的距離 */
+  color: #222;
+  text-align: left; /* 標題左對齊 */
+  padding: 5px;
 }
 
-.index_post h2 a {
+.post h2 {
+  font-size: 2em;
+  margin-top: 1em; /* 調整標題與上方內容的距離 */
+  margin-bottom: 0.1em; /* 調整標題與下方內容的距離 */
+  color: #333;
+  text-align: left; /* 標題左對齊 */
+}
+
+.post h2 a {
   color: #ff6f61;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.index_post h2 a:hover {
+.post h2 a:hover {
   color: #e64a19;
 }
 
-/* 文章信息區 */
-.index_post p {
-  text-align: center;
-  margin: 10px 0;
+.post h3 {
+  margin-top: 1em; /* 調整標題與上方內容的距離 */
+  margin-bottom: 0.1em; /* 調整標題與下方內容的距離 */
 }
 
-.index_post .post-date, .index_post .post-author {
+/* 文章信息區 */
+.post p {
+  margin: 10px 0;
+  line-height: 1.6; /* 提升行間距以增強可讀性 */
+}
+
+/* 摘要區,日期,作者 */
+.post-date, .post-author{
   font-style: italic;
   color: #666;
 }
 
-/* 摘要區 */
-.index_post .excerpt {
-  color: #555;
-  line-height: 1.8;
-  text-align: center;
+.post .excerpt{
+  color: #454242;
+  line-height: 1;
 }
 
-/* 讀更多連結 */
-.index_post .read-more {
+/* 內容區域 */
+.article-content {
+  max-width: 100%;
+  margin: 0;
+  padding: 18px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  /* font-size: 18px; */
+  line-height: 1.8;
+
+}
+
+/* 內容中的圖片樣式 */
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
   display: block;
-  text-align: center;
-  font-size: 1em;
-  color: #3773ff;
-  text-decoration: none;
+  margin: 10px 0; /* 上下邊距 */
+}
+
+/* 調整按鈕位置 */
+.copy-button {
+  display: block; /* 使按鈕為塊級元素，並自動在新行中顯示 */
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgb(13, 0, 97);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px; /* 按鈕與程式碼區塊之間的距離 */
+}
+
+.copy-button:hover {
+  background-color: #c3e0ff;
+}
+
+/* 行內程式碼樣式 */
+code {
+  background-color: #f8f8f8; /* 淺灰色背景 */
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  /* font-size: 95%; */
+  color: #d63384; /* 程式碼顏色 */
+}
+
+/* 多行程式碼區塊樣式 */
+/* 調整 pre 標籤的樣式以適應按鈕 */
+pre {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-x: auto;
+  white-space: pre;
+  margin: 0 0 1.5em 0; /* 增加底部空間 */
+  box-sizing: border-box;
+}
+
+/* 調整滾動條樣式 */
+pre::-webkit-scrollbar {
+  width: 5px; /* 卷軸寬度 */
+}
+
+pre::-webkit-scrollbar-thumb {
+  background-color: #9f9f9f; /* 卷軸顏色 */
+  border-radius: 4px; /* 卷軸邊角 */
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+  background-color: #888; /* 滑鼠懸停時的顏色 */
+}
+
+/* 行內程式碼樣式 */
+pre code {
+  background: transparent; /* 使內部程式碼塊背景透明 */
+  color: inherit; /* 繼承父元素的顏色 */
+  display: block; /* 使 code 區塊在 pre 區塊中顯示為塊級元素 */
+  margin: 0; /* 移除默認邊距 */
+  padding: 0; /* 移除默認內邊距 */
+}
+
+
+
+/* 超連結樣式 */
+.post a {
+  color: #d63384; /* 連結顏色 */
+  text-decoration: none; /* 去掉下劃線 */
+  transition: color 0.s ease; /* 顏色過渡效果 */
   font-weight: bold;
 }
 
-.index_post .read-more:hover {
-  text-decoration: underline;
+.post a:hover,.post a:focus {
+  color: #7a00b3; /* 懸停和焦點時的顏色 */
+  text-decoration: underline; /* 懸停時顯示下劃線 */
+  font-weight: bold;
+}
+
+/* 表格整體樣式 */
+table {
+  width: 100%;
+  border-collapse: collapse; /* 去掉表格間距 */
+  margin-bottom: 1em; /* 底部邊距 */
+}
+
+/* 表格標題行樣式 */
+th {
+  background-color: #ffedd8; /* 表格標題背景顏色 */
+  color: rgb(130, 0, 0); /* 標題文字顏色 */
+  padding: 10px;
+  text-align: left; /* 左對齊 */
+}
+
+/* 表格內容行樣式 */
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd; /* 下邊框 */
+}
+
+/* 表格內容行的偶數行背景顏色 */
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* 偶數行背景顏色 */
+}
+
+/* 表格內容行的懸停效果 */
+tr:hover {
+  background-color: #e0e0e0; /* 懸停背景顏色 */
+}
+
+/* Markdown 列表（如 - 或 *） */
+/* 無序列表（如 - 或 *） */
+ul {
+  padding-left: 20px; /* 無序列表的左邊距 */
+  margin-left: 0; /* 去除外邊距 */
+}
+
+/* 有序列表（如 1. 或 2.） */
+ol {
+  padding-left: 20px; /* 有序列表的左邊距 */
+  margin-left: 0; /* 去除外邊距 */
+}
+
+/* 讓有序列表的數字部分變大 */
+/* ol li {
+  font-size: 1em;  其他文字保持原狀 
+} */
+
+ol li::marker {
+  font-size: 1.2em; /* 數字部分變大 */
+  font-weight: bold; /* 可選：讓數字更突出 */
+}
+
+/* 當表格超出容器寬度時顯示滾動條 */
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* 平滑滾動 */
+}
+
+/* 使用 > 符號來創建引用框 */
+.custom-quote {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-weight: bold;
+  font-size: larger;
 }
