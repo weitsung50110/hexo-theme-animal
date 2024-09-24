@@ -37,6 +37,8 @@ This project use ejs as template.
 - [加入新的page - about](#加入新的page---about)
 - [SEO - 提供 Sitemap](#SEO---提供-Sitemap)
 - [Pagination顯示所有文章](#Pagination顯示所有文章)
+- [GitHub 的評論系統](#GitHub-的評論系統)
+
 
 ![](https://raw.githubusercontent.com/weitsung50110/hexo-theme-animal/main/github_img/a7.png)
 
@@ -235,3 +237,33 @@ Pagination設置per_page為0，來顯示所有文章
         index_generator:
           path: ''
           per_page: 0
+
+## GitHub 的評論系統
+在post.ejs中，加入下面這個語法。
+
+    <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script>
+      var gitalk = new Gitalk({
+        clientID: '<%= config.gitalk.clientID %>',
+        clientSecret: '<%= config.gitalk.clientSecret %>',  // 替換為最新的 client secret
+        repo: '<%= config.gitalk.repo %>',
+        owner: '<%= config.gitalk.owner %>',
+        admin: ['weitsung50110'],
+        id: location.pathname.slice(0, 50),
+        distractionFreeMode: false
+      });
+      gitalk.render('gitalk-container');
+    </script>
+
+Hexo 根目錄下的 _config.yml中加入
+
+    gitalk:
+      clientID: 'YOUR_CLIENT_ID'
+      clientSecret: 'YOUR_CLIENT_SECRET'
+      repo: 'weitsung50110.github.io'  # 使用你的 GitHub Pages 倉庫
+      owner: 'weitsung50110'            # 你的 GitHub 用戶名
+      admin: ['weitsung50110']          # 管理員列表
+      id: location.pathname.slice(0, 50)
+      distractionFreeMode: false
