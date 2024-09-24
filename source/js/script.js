@@ -56,3 +56,26 @@ document.addEventListener('DOMContentLoaded', function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
+
+
+document.addEventListener('mousemove', function(e) {
+  const cursorEffect = document.getElementById('cursor-effect');
+  const scrollbarWidth = 12; // 根據你的滾動條寬度設置
+
+  // 檢查滑鼠是否在滾動條範圍內
+  const isOverScrollbar = (e.pageX > window.innerWidth - scrollbarWidth-50);
+
+  if (isOverScrollbar) {
+    cursorEffect.style.opacity = 0; // 隱藏特效
+  } else {
+    cursorEffect.style.left = (e.pageX + 3) + 'px'; // 向右偏移 3 像素
+    cursorEffect.style.top = (e.pageY + 10) + 'px'; // 向下偏移 10 像素
+    cursorEffect.style.opacity = 1; // 顯示特效
+  }
+});
+
+// 當滑鼠移開時隱藏特效
+document.addEventListener('mouseleave', function() {
+  const cursorEffect = document.getElementById('cursor-effect');
+  cursorEffect.style.opacity = 0; // 隱藏特效
+});

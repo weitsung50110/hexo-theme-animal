@@ -1,12 +1,31 @@
+<!-- 限制每頁顯示的文章數量 -->
+<%
+  var pageSize = 6; // 每頁顯示的文章數量
+  var posts = page.posts || [];
+  var totalPosts = posts.length;
 
+  // 計算顯示的文章範圍
+  var startIndex = 0; // 顯示的起始文章索引
+  var endIndex = Math.min(pageSize, totalPosts); // 顯示的結束文章索引
+  var visiblePosts = posts.slice(startIndex, endIndex);
+%>
+
+<!-- index.ejs -->
 <div id="home" class="container home-intro">
   <img src="<%- config.url %><%- theme.custom.home_intro_img %>" alt="Welcome Image" class="home-image">
   <h2><%- theme.custom.wellcome1 %></h2>
-  <p><%- theme.custom.wellcome2 %></p>
+  <!-- 桌面版本 -->
+  <p class="welcome-desktop"><%- theme.custom.wellcome2 %></p>
+  <!-- 手機版本 -->
+  <p class="welcome-mobile"><%- theme.custom.wellcome3 %></p>
+  <!-- 顯示總文章數量 -->
+  <p class="post-count"><%- __('post.total') %> <%= totalPosts %> <%- __('post.total2') %></p>
 </div>
 
+
+
 <div class="posts-container">
-  <% page.posts.each(function(post) { %>
+  <% visiblePosts.forEach(function(post) { %>
     <article class="index_post">
       <h2><a href="<%= post.permalink %>"><%= post.title %></a></h2>
       <p class="post-date"><%= moment(post.date).tz('Asia/Taipei').format('YYYY-MM-DD') %></p>
@@ -42,3 +61,5 @@
     </article>
   <% }); %>
 </div>
+
+<div id="cursor-effect" class="cursor-effect"></div>

@@ -57,17 +57,19 @@ main ul li span.date {
   font-size: 0.9em; /* 日期字體大小 */
 }
 
+
 /* 標籤區域樣式 */
 #tags {
-  margin-top: 20px; /* 上方間距 */
   padding: 10px; /* 內邊距 */
-  background: #e3f2fd; /* 背景顏色 */
-  border-radius: 4px; /* 圓角 */
+  background: linear-gradient(135deg, #f9f9f9, #e3fcfd); /* 漸變背景 */
+  border-radius: 12px; /* 圓角 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* 陰影 */
+  transition: box-shadow 0.3s ease-in-out; /* 陰影過渡效果 */
 }
 
 #tags h3 {
-  font-size: 1.5em; /* 標籤標題字體大小 */
-  color: #333; /* 標籤標題顏色 */
+  font-size: 1.8em; /* 標籤標題字體大小 */
+  color: #3e2723; /* 標籤標題顏色 */
   margin-bottom: 10px; /* 標籤標題下方間距 */
 }
 
@@ -78,33 +80,45 @@ main ul li span.date {
 }
 
 #tags ul li {
-  display: inline-block; /* 行內顯示 */
-  margin-right: 10px; /* 右側間距 */
+  padding: 4px 4px 4px 4px; /* 內邊距 */
+  border-radius: 8px; /* 圓角 */
+  border: 1px solid #ddd; /* 列表項目分隔線 */
+  background: #ffffff; /* 背景顏色 */
+  margin-bottom: 5px; /* 列表項目下方間距 */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* 背景顏色和變形過渡效果 */
+}
+
+#tags ul li:hover {
+  background-color: #fffff2; /* 懸停背景顏色 */
+  transform: translateY(-3px); /* 懸停時微微上浮效果 */
 }
 
 #tags ul li a {
-  color: #4fc3f7; /* 標籤顏色 */
+  color: #e5491e; /* 文章標題顏色 */
   text-decoration: none; /* 去掉下劃線 */
-  font-size: 1em; /* 標籤字體大小 */
+  font-size: 1.2em; /* 文章標題字體大小 */
+  border-radius: 20px; /* 圓角 */
 }
 
 #tags ul li a:hover {
   text-decoration: underline; /* 懸停時顯示下劃線 */
-  color: #003c71; /* 懸停顏色 */
+  color: #004d40; /* 懸停顏色 */
 }
+
 
 /* 分類區域樣式 */
 #category {
-  margin-top: 20px; /* 上方間距 */
   padding: 10px; /* 內邊距 */
-  background: #e8f5e9; /* 背景顏色 */
-  border-radius: 4px; /* 圓角 */
+  background: linear-gradient(135deg, #f9f9f9, #e0f8e6); /* 漸變背景 */
+  border-radius: 12px; /* 圓角 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* 陰影 */
+  transition: box-shadow 0.3s ease-in-out; /* 陰影過渡效果 */
 }
 
 #category h3 {
-  font-size: 1.5em; /* 分類標題字體大小 */
-  color: #333; /* 分類標題顏色 */
-  margin-bottom: 10px; /* 分類標題下方間距 */
+  font-size: 1.8em; /* 標籤標題字體大小 */
+  color: #3e2723; /* 標籤標題顏色 */
+  margin-bottom: 10px; /* 標籤標題下方間距 */
 }
 
 #category ul {
@@ -114,17 +128,27 @@ main ul li span.date {
 }
 
 #category ul li {
-  display: inline-block; /* 行內顯示 */
-  margin-right: 10px; /* 右側間距 */
+  padding: 4px 4px 4px 4px; /* 內邊距 */
+  border-radius: 8px; /* 圓角 */
+  border: 1px solid #ddd; /* 列表項目分隔線 */
+  background: #ffffff; /* 背景顏色 */
+  margin-bottom: 5px; /* 列表項目下方間距 */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* 背景顏色和變形過渡效果 */
+}
+
+#category ul li:hover {
+  background-color: #fcf8ff; /* 懸停背景顏色 */
+  transform: translateY(-3px); /* 懸停時微微上浮效果 */
 }
 
 #category ul li a {
-  color: #66bb6a; /* 分類顏色 */
+  color: #e5671e; /* 文章標題顏色 */
   text-decoration: none; /* 去掉下劃線 */
-  font-size: 1em; /* 分類字體大小 */
+  font-size: 1.2em; /* 文章標題字體大小 */
+  border-radius: 20px; /* 圓角 */
 }
 
 #category ul li a:hover {
   text-decoration: underline; /* 懸停時顯示下劃線 */
-  color: #388e3c; /* 懸停顏色 */
+  color: #004d40; /* 懸停顏色 */
 }

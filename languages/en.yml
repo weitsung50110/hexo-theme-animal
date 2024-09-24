@@ -12,6 +12,8 @@ menu:
 post:
   date: 'Date：'
   author: 'Author：'
+  total: 'published articles:'
+  total2: 'posts'
 
 float:
   toc: 'Contents'

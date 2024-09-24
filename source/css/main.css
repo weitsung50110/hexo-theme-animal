@@ -3,7 +3,7 @@
 /* 全局樣式 */
 /* 引入其他 CSS 文件 */
 @import url('style.css');
-@import url('style_archives.css');
+@import url('style_archives_tagCatego.css');
 @import url('style_header.css');
 @import url('style_index_post.css');
 @import url('style_post.css');

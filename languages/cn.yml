@@ -12,6 +12,8 @@ menu:
 post:
   date: '日期：'
   author: '作者：'
+  total: '文章數量:'
+  total2: '篇'
 
 float:
   toc: '目錄'
