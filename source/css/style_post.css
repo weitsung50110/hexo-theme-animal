@@ -44,6 +44,11 @@
   color: #e64a19;
 }
 
+.post h3 {
+  margin-top: 1em; /* 調整標題與上方內容的距離 */
+  margin-bottom: 0.1em; /* 調整標題與下方內容的距離 */
+}
+
 /* 文章信息區 */
 .post p {
   margin: 10px 0;
@@ -104,8 +109,9 @@ code {
   background-color: #f8f8f8; /* 淺灰色背景 */
   border-radius: 3px;
   padding: 0.2em 0.4em;
-  /* font-size: 95%; */
-  color: #d63384; /* 程式碼顏色 */
+  font-size: 15.8px;
+  color: #9233d6; /* 程式碼顏色 */
+  font-weight: bold;
 }
 
 /* 多行程式碼區塊樣式 */
@@ -142,6 +148,7 @@ pre code {
   display: block; /* 使 code 區塊在 pre 區塊中顯示為塊級元素 */
   margin: 0; /* 移除默認邊距 */
   padding: 0; /* 移除默認內邊距 */
+  font-weight: normal; /* 將多行程式碼設置為正常字體 */
 }
 
 
@@ -222,8 +229,32 @@ ol li::marker {
 
 /* 使用 > 符號來創建引用框 */
 .custom-quote {
-  border: 1px solid #ccc;
+  border: 1px dashed #ccc;
+  background-color: #fef7f7; /* 背景顏色 */
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 8px; /* 圓角 */
+  margin: 20px 0px;
+  padding: 0px 10px;
+}
+
+cen {
+  border: 4px dashed #ccc;
+  background-color: #fffff7; /* 背景顏色 */
   padding: 10px;
   font-weight: bold;
   font-size: larger;
+  border-radius: 8px; /* 圓角 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 陰影 */
+  text-align: center; /* 文字置中 */
+  display: flex; /* 使用彈性盒子模型 */
+  justify-content: center; /* 水平置中 */
+  align-items: center; /* 垂直置中 */
+  height: auto; /* 設定高度以確保垂直置中 */
+  margin-bottom: 25px;
+}
+
+cen:hover{
+  border: 4px dashed rgb(255, 164, 164);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35); /* 陰影 */
 }
