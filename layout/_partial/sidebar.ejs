@@ -2,13 +2,26 @@
 <div id="sidebar">
   <button id="close-btn">&times;</button>
   <div class="author-info">
-    <img src="<%- config.url %><%- theme.sidebar.Author_photo %>" alt="作者照片" class="author_photo">
+    <div class="info-wrapper">
+      <div class="social-icons">
+        <a href="<%- theme.menu.GitHub1 %>" target="_blank">
+          <img src="<%- config.url %><%- theme.menu.GitHub_logo %>" alt="GitHub" class="social-icon">
+        </a>
+        <a href="<%- theme.menu.Medium1 %>" target="_blank">
+          <img src="<%- config.url %><%- theme.menu.Medium_logo %>" alt="Medium" class="social-icon">
+        </a>
+        <a href="<%- theme.menu.Instagram1 %>" target="_blank">
+          <img src="<%- config.url %><%- theme.menu.Instagram_logo %>" alt="Instagram" class="social-icon">
+        </a>
+      </div>
+      <img src="<%- config.url %><%- theme.sidebar.Author_photo %>" alt="作者照片" class="author_photo">
+    </div>
     <h2><%- theme.sidebar.Author %></h2>
     <p><%- theme.sidebar.Auther_descrip %></p>
     <span><%- theme.sidebar.other %></span>
-    
-    <a href="<%- theme.sidebar.website %>"><%- theme.sidebar.website_btn %></a>
+    <div class="About">
+      <a href="<%- theme.sidebar.website %>"><%- theme.sidebar.website_btn %></a>
+    </div>
   </div>
 </div>
-
 <button id="open-btn">🤗</button>

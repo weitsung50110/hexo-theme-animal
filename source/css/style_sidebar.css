@@ -38,7 +38,7 @@
   display: block; /* 使 span 元素顯示為區塊級元素，以便換行 */
 }
 
-#sidebar .author-info a {
+#sidebar .author-info .About a {
   text-decoration: none;
   background: #f9f5fb;
   color: #cd6000;
@@ -47,7 +47,7 @@
   transition: background 0.1s, color 0.1s;
 }
 
-#sidebar .author-info a:hover{
+#sidebar .author-info .About a:hover{
   background: #f7e4fc;
   color: #633000;
 }
@@ -95,7 +95,6 @@ body{
 
 
 
-
 /* 固定在網頁左邊中間的按鈕 */
 #open-btn {
   position: fixed; /* 固定定位 */
@@ -117,4 +116,39 @@ body{
 
 #open-btn:hover {
   background-color: #daf6fa; /* 滑鼠懸停時的顏色變化 */
+}
+
+
+
+
+
+.info-wrapper {
+  display: flex; /* 使用彈性布局 */
+  align-items: center; /* 垂直居中對齊 */
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+  margin-right: 10px; /* 右側間距 */
+}
+
+.social-icon {
+  width: 30px; /* 圖標寬度 */
+  height: 30px; /* 圖標高度 */
+  margin: 5px 0; /* 垂直間距 */
+  border-radius: 50%; /* 圓形背景 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s; /* 鼠標懸停效果過渡 */
+}
+
+.social-icon img {
+  width: 70%; /* 圖標圖片的寬度 */
+  height: auto; /* 自動高度 */
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* 鼠標懸停時放大 */
 }

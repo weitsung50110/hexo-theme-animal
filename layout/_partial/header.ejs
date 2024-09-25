@@ -1,7 +1,7 @@
 <header>
   <div class="header-content">
     <img src="<%- config.url %><%- theme.custom.logo %>" alt="Logo" class="logo">
-    <h1><a href="<%= config.url %>"><%= theme.title %></a></h1>
+    <h1><a href="<%= config.url %>"><%= theme.title %><br/><%= theme.title2 %></a></h1>
     <img src="<%- config.url %><%- theme.custom.logo2 %>" alt="Logo2" class="logo2">
 
     <!-- 在 nav 中包裹選單 -->
@@ -14,9 +14,18 @@
         <li class="dropdown">
           <a class="menu-button"><%- __('menu.follow_me') %></a>
           <div class="nav-menu">
-            <a href="<%- theme.menu.GitHub1 %>"><%- theme.menu.GitHub2 %></a>
-            <a href="<%- theme.menu.Medium1 %>"><%- theme.menu.Medium2 %></a>
-            <a href="<%- theme.sidebar.website %>"><%- theme.sidebar.website_btn %></a>
+            <div class="menu-content">
+              <a href="<%- theme.menu.GitHub1 %>">
+                <img src="<%- config.url %><%- theme.menu.GitHub_logo %>" alt="GitHub" class="dropdown_social-icon">
+                <%- theme.menu.GitHub2 %></a>
+              <a href="<%- theme.menu.Medium1 %>">
+                <img src="<%- config.url %><%- theme.menu.Medium_logo %>" alt="Medium" class="dropdown_social-icon">
+                <%- theme.menu.Medium2 %></a>
+              <a href="<%- theme.menu.Instagram1 %>">
+                <img src="<%- config.url %><%- theme.menu.Instagram_logo %>" alt="Instagram" class="dropdown_social-icon">
+                <%- theme.menu.Instagram2 %></a>
+              <a href="<%- theme.sidebar.website %>"><%- theme.sidebar.website_btn %></a>
+            </div>
           </div>
         </li>
       </ul>
@@ -37,5 +46,6 @@
   <button class="menu-toggle" aria-label="Toggle Navigation">
     ☰
   </button>
-
+  
+  <div id="press_show_cute"></div>
 </header>

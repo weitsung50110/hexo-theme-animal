@@ -96,6 +96,12 @@
         white-space: nowrap; /* 防止內容換行 */
     }
 
+    .nav-menu {
+      position: fixed; /* 固定定位 */
+      top: 200px; /* 調整下拉選單距離頂部的位置 */
+      right: 0;
+    }
+
     #open-btn {
       width: 60px; /* 在小屏幕上設置較小的寬度 */
       height: 60px; /* 在小屏幕上設置較小的高度 */

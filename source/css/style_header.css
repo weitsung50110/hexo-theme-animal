@@ -100,17 +100,15 @@ nav {
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  opacity: 0;
   pointer-events: none; /* 初始禁用點擊事件 */
+  opacity: 0; /* 初始不透明 */
+  transition: opacity 0.3s; /* 添加過渡效果 */
 }
 
 /* 顯示下拉菜單 */
-.dropdown:hover .nav-menu,
 .dropdown .nav-menu.show {
   display: block;
-  opacity: 1;
-  transform: translateY(0); /* 確保顯示時不移動 */
+  opacity: 1; /* 顯示時不透明 */
   pointer-events: auto; /* 顯示時啟用點擊事件 */
 }
 
@@ -118,20 +116,22 @@ nav {
 .nav-menu a {
   display: block;
   padding: 10px 15px;
-  color: #333 !important;
+  color: #ddd !important;
+  background-color: rgba(8, 22, 57, 0.694) !important;
   text-decoration: none;
   border-bottom: 1px solid #ddd;
 }
 
 /* 連結懸停樣式 */
 .nav-menu a:hover {
-  background: #f8f9fa;
-  color: #007bff !important;
+  color: #ffffff !important;
+  background-color: rgb(196, 82, 33) !important;
 }
 
-/* 確保 .dropdown 使用相對定位 */
-.dropdown {
-  position: relative; /* 使 .nav-menu 相對於這個容器定位 */
+.dropdown_social-icon {
+  width: 20px; /* 圖標寬度 */
+  height: 20px; /* 圖標高度 */
+  margin-right: 8px; /* 圖標與文字之間的間距 */
 }
 
 /* 漢堡選單樣式 */

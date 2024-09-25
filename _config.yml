@@ -15,8 +15,13 @@ custom:
 menu:
   GitHub1: "https://github.com/weitsung50110"
   GitHub2: "GitHub"
+  GitHub_logo: "/images/github.png"
   Medium1: "https://medium.com/@weiberson"
   Medium2: "Medium"
+  Medium_logo: "/images/medium.png"
+  Instagram1: "https://www.instagram.com/weiberson_blog/"
+  Instagram2: "IG"
+  Instagram_logo: "/images/ig.png"
 
 sidebar:
   Author_photo: /images/a1.png
