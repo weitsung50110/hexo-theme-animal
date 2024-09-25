@@ -176,10 +176,6 @@
       width: 180px; /* 在更小屏幕上進一步縮小側邊欄的寬度 */
     }
 
-    #sidebar #close-btn {
-      right: 5px; /* 距離右邊20px */
-    }
-
     .toc {
       position: fixed;
       bottom: 0;
@@ -199,5 +195,31 @@
     .toc ul li a {
       font-size: 0.9em; /* 調整字體大小 */
       padding: 12px; /* 增加內邊距 */
+    }
+
+    #sidebar #close-btn {
+      font-size: 22px;
+      padding: 9px;
+      cursor: pointer;
+      top: 0px; /* 距離頂部20px */
+      right: 0px; /* 距離右邊20px */
+    }
+    
+    .info-wrapper {
+      flex-direction: column; /* 在手機模式下改為垂直排列 */
+      align-items: center; /* 水平居中 */
+    }
+  
+    .social-icons {
+      flex-direction: row; /* 改為橫向排列 */
+      margin-bottom: 10px; /* 上方間距 */
+      justify-content: center; /* 水平居中 */
+    }
+
+    .social-icon {
+      margin: 0 5px; /* 左右間距 */
+      width: 30px; /* 圖標寬度 */
+      height: 30px; /* 圖標高度 */
+      padding: 0%;
     }
   }

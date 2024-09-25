@@ -134,10 +134,11 @@ body{
 }
 
 .social-icon {
-  width: 30px; /* 圖標寬度 */
-  height: 30px; /* 圖標高度 */
+  width: 43.5px; /* 圖標寬度 */
+  height: 33px; /* 圖標高度 */
   margin: 5px 0; /* 垂直間距 */
   border-radius: 50%; /* 圓形背景 */
+  padding-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,7 +146,7 @@ body{
 }
 
 .social-icon img {
-  width: 70%; /* 圖標圖片的寬度 */
+  width: 100%; /* 圖標圖片的寬度 */
   height: auto; /* 自動高度 */
 }
 
