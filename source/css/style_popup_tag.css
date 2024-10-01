@@ -37,7 +37,7 @@
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #f37100; /* 懸停時的顏色 */
   text-decoration: none;
 }
 
@@ -48,12 +48,16 @@
   gap: 20px; /* 各區域之間的間距 */
 }
 
-.social-links-section, .categories-section, .tags-section {
+/* 各區域樣式 */
+.social-links-section,
+.categories-section,
+.tags-section {
   flex: 1 1 30%; /* 基於容器大小自動調整 */
-  background-color: #f9f9f9; /* 背景顏色 */
-  border-radius: 5px; /* 圓角邊框 */
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 輕微的陰影 */
+  background-color: #fefefe; /* 背景顏色 */
+  border-radius: 10px; /* 圓角邊框 */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 輕微的陰影 */
+  transition: transform 0.3s; /* 升起的效果 */
 }
 
 /* 標題樣式 */
@@ -61,10 +65,8 @@
   margin-bottom: 10px;
   font-weight: bold;
   color: #333;
-}
-
-.modal-sections h3:hover {
-  background-color: #ffe2c2;
+  border-bottom: 2px solid #f37100; /* 下方邊框 */
+  padding-bottom: 5px;
 }
 
 /* 社交連結樣式 */
@@ -79,33 +81,38 @@
   color: #f37100;
   text-decoration: none;
   margin-bottom: 10px;
-  transition: color 0.1s ease, transform 0.1s ease; /* 顏色和縮放過渡效果 */
+  padding: 10px;
+  border-radius: 5px; /* 圓角 */
+  transition: background-color 0.3s ease, color 0.3s ease; /* 背景顏色和顏色過渡效果 */
 }
 
 .social-links a:hover {
+  background-color: rgba(243, 113, 0, 0.1); /* 懸停時的背景顏色 */
   color: #633000; /* 懸停時的顏色 */
-  transform: scale(1.02); /* 懸停時的縮放效果 */
+  transform: scale(1.05); /* 懸停時的縮放效果 */
   font-weight: bold;
-  text-decoration: underline; /* 懸停時顯示下劃線 */
 }
 
 /* 類別和標籤區域 */
-.categories-container, .tags-container {
+.categories-container,
+.tags-container {
   display: flex;
   flex-wrap: wrap; /* 自動換行 */
   gap: 10px; /* 項目之間的間距 */
 }
 
-.category-item, .tag-item {
+.category-item,
+.tag-item {
   background-color: #f9f5fb;
   border-radius: 20px; /* 圓角 */
-  padding: 8px 15px;
+  padding: 10px 15px;
   color: #cd6000;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease; /* 背景顏色和顏色過渡效果 */
 }
 
-.category-item:hover, .tag-item:hover {
+.category-item:hover,
+.tag-item:hover {
   background-color: #f7e4fc;
   color: #633000;
   font-weight: bold;

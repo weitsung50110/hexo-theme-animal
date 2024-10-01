@@ -1,14 +1,15 @@
 /* 整體文章區域 */
 .post {
   font-family: 'Arial', sans-serif;
-  color: #333;
-  /* margin: 20px auto; */
+  color: #444; /* 更柔和的文字顏色 */
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px; /* 圓角 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9;
+  background-color: #ffffff; /* 背景顏色改為白色 */
   max-width: auto; /* 設置最大寬度，避免內容過於寬 */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* 鼠標懸停效果 */
@@ -19,34 +20,30 @@
 /* 標題樣式 */
 .post h1 {
   font-size: 2.5em;
-  margin-top: 1em; /* 調整標題與上方內容的距離 */
-  margin-bottom: 0.1em; /* 調整標題與下方內容的距離 */
-  color: #222;
+  margin: 1em 0; /* 調整標題上下的距離 */
+  color: #2c3e50; /* 深色標題 */
   text-align: left; /* 標題左對齊 */
   padding: 5px;
 }
 
 .post h2 {
   font-size: 2em;
-  margin-top: 1em; /* 調整標題與上方內容的距離 */
-  margin-bottom: 0.1em; /* 調整標題與下方內容的距離 */
-  color: #333;
-  text-align: left; /* 標題左對齊 */
+  margin: 1em 0; /* 調整標題上下的距離 */
+  color: #34495e; /* 更深的標題顏色 */
 }
 
 .post h2 a {
-  color: #ff6f61;
+  color: #e74c3c; /* 更新為鮮豔的紅色 */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .post h2 a:hover {
-  color: #e64a19;
+  color: #c0392b; /* 懸停時顏色 */
 }
 
 .post h3 {
-  margin-top: 1em; /* 調整標題與上方內容的距離 */
-  margin-bottom: 0.1em; /* 調整標題與下方內容的距離 */
+  margin: 1em 0; /* 調整標題上下的距離 */
 }
 
 /* 文章信息區 */
@@ -56,14 +53,14 @@
 }
 
 /* 摘要區,日期,作者 */
-.post-date, .post-author{
+.post-date, .post-author {
   font-style: italic;
-  color: #666;
+  color: #7f8c8d; /* 柔和的灰色 */
 }
 
-.post .excerpt{
-  color: #454242;
-  line-height: 1;
+.post .excerpt {
+  color: #444; /* 使用與主文字相同的顏色 */
+  line-height: 1.4;
 }
 
 /* 內容區域 */
@@ -71,60 +68,58 @@
   max-width: 100%;
   margin: 0;
   padding: 18px;
-  background-color: #fff;
+  background-color: #ffffff; /* 內容背景為白色 */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  /* font-size: 18px; */
   line-height: 1.8;
-
 }
 
 /* 內容中的圖片樣式 */
 .article-content img {
   max-width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 5px; /* 圓角圖片 */
   display: block;
   margin: 10px 0; /* 上下邊距 */
 }
 
 /* 調整按鈕位置 */
 .copy-button {
-  display: block; /* 使按鈕為塊級元素，並自動在新行中顯示 */
-  background-color: rgba(0, 0, 0, 0.2);
-  color: rgb(13, 0, 97);
+  position: absolute;
+  top: 10px;  /* 調整位置 */
+  right: 10px;  /* 調整位置 */
+  background-color: #007bff;  /* 按鈕顏色 */
+  color: white;
   border: none;
+  border-radius: 5px;
   padding: 5px 10px;
-  border-radius: 3px;
   cursor: pointer;
-  margin-top: 10px; /* 按鈕與程式碼區塊之間的距離 */
+  transition: background-color 0.1s;
 }
 
 .copy-button:hover {
-  background-color: #c3e0ff;
+  background-color: #0056b3;  /* hover 時的顏色 */
 }
+
 
 /* 行內程式碼樣式 */
 code {
-  background-color: #f8f8f8; /* 淺灰色背景 */
+  background-color: #f0f0f0; /* 淺灰色背景 */
   border-radius: 3px;
   padding: 0.2em 0.4em;
   font-size: 15.8px;
-  color: #9233d6; /* 程式碼顏色 */
-  font-weight: bold;
+  color: #8e44ad; /* 紫色程式碼 */
+  font-weight: 500;
 }
 
 /* 多行程式碼區塊樣式 */
-/* 調整 pre 標籤的樣式以適應按鈕 */
 pre {
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
+  background-color: #f8f8f8; /* 淺背景 */
+  border: 1px solid #ddd; /* 輕微邊框 */
   border-radius: 5px;
   padding: 10px;
   overflow-x: auto;
-  white-space: pre;
   margin: 0 0 1.5em 0; /* 增加底部空間 */
-  box-sizing: border-box;
 }
 
 /* 調整滾動條樣式 */
@@ -133,12 +128,12 @@ pre::-webkit-scrollbar {
 }
 
 pre::-webkit-scrollbar-thumb {
-  background-color: #9f9f9f; /* 卷軸顏色 */
-  border-radius: 4px; /* 卷軸邊角 */
+  background-color: #bdc3c7; /* 滑塊顏色 */
+  border-radius: 4px; /* 滑塊邊角 */
 }
 
 pre::-webkit-scrollbar-thumb:hover {
-  background-color: #888; /* 滑鼠懸停時的顏色 */
+  background-color: #95a5a6; /* 滑鼠懸停時的顏色 */
 }
 
 /* 行內程式碼樣式 */
@@ -151,20 +146,35 @@ pre code {
   font-weight: normal; /* 將多行程式碼設置為正常字體 */
 }
 
+/* 高亮樣式 */
+.highlight-string {
+  color: #e76d3c; /* 字串顏色 */
+}
 
+.highlight-number {
+  color: #d94fd2; /* 數字顏色 */
+}
+
+.highlight-comment {
+  color: #1f9c53; /* 註解顏色 */
+  font-style: italic;
+}
+
+.highlight-bracket {
+  color: #34495e; /* 括號顏色 */
+}
 
 /* 超連結樣式 */
 .post a {
-  color: #d63384; /* 連結顏色 */
+  color: #e67e22; /* 橙色連結 */
   text-decoration: none; /* 去掉下劃線 */
-  transition: color 0.s ease; /* 顏色過渡效果 */
+  transition: color 0.3s ease; /* 顏色過渡效果 */
   font-weight: bold;
 }
 
-.post a:hover,.post a:focus {
-  color: #7a00b3; /* 懸停和焦點時的顏色 */
+.post a:hover, .post a:focus {
+  color: #d35400; /* 懸停和焦點時的顏色 */
   text-decoration: underline; /* 懸停時顯示下劃線 */
-  font-weight: bold;
 }
 
 /* 表格整體樣式 */
@@ -176,8 +186,8 @@ table {
 
 /* 表格標題行樣式 */
 th {
-  background-color: #ffedd8; /* 表格標題背景顏色 */
-  color: rgb(130, 0, 0); /* 標題文字顏色 */
+  background-color: #ffe6e6; /* 淺紅色背景 */
+  color: #c0392b; /* 深紅色文字 */
   padding: 10px;
   text-align: left; /* 左對齊 */
 }
@@ -190,12 +200,12 @@ td {
 
 /* 表格內容行的偶數行背景顏色 */
 tr:nth-child(even) {
-  background-color: #f2f2f2; /* 偶數行背景顏色 */
+  background-color: #f9f9f9; /* 偶數行背景顏色 */
 }
 
 /* 表格內容行的懸停效果 */
 tr:hover {
-  background-color: #e0e0e0; /* 懸停背景顏色 */
+  background-color: #eaeaea; /* 懸停背景顏色 */
 }
 
 /* Markdown 列表（如 - 或 *） */
@@ -212,10 +222,6 @@ ol {
 }
 
 /* 讓有序列表的數字部分變大 */
-/* ol li {
-  font-size: 1em;  其他文字保持原狀 
-} */
-
 ol li::marker {
   font-size: 1.2em; /* 數字部分變大 */
   font-weight: bold; /* 可選：讓數字更突出 */
@@ -230,17 +236,17 @@ ol li::marker {
 /* 使用 > 符號來創建引用框 */
 .custom-quote {
   border: 1px dashed #ccc;
-  background-color: #fef7f7; /* 背景顏色 */
-  font-weight: bold;
-  font-size: 18px;
+  background-color: #fffff3; /* 背景顏色 */
+  font-size: 17.5px;
   border-radius: 8px; /* 圓角 */
-  margin: 20px 0px;
-  padding: 0px 10px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding: 10px; /* 調整內邊距 */
 }
 
 cen {
   border: 4px dashed #ccc;
-  background-color: #fffff7; /* 背景顏色 */
+  background-color: #f6fdff; /* 背景顏色 */
   padding: 10px;
   font-weight: bold;
   font-size: larger;
@@ -254,7 +260,7 @@ cen {
   margin-bottom: 25px;
 }
 
-cen:hover{
-  border: 4px dashed rgb(255, 164, 164);
+cen:hover {
+  border: 4px dashed rgb(164, 178, 255);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35); /* 陰影 */
 }

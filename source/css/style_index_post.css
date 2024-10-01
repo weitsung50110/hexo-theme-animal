@@ -25,23 +25,13 @@
 /* 標題樣式 */
 .index_post h2 {
   font-size: 1.5em;
-  color: #ff6347; /* 西红柿红 */
+  color: #515fd7; /* 西红柿红 */
   text-align: center;
-  background-color: #f3fbff; /* 柔和的奶油色背景 */
-  padding: 10px; /* 加点内边距 */
+  background-color: #f5fff3; /* 柔和的奶油色背景 */
+  padding: 10px; /* rgb(244, 255, 243)/
   border-radius: 5px; /* 圆角边框 */
 }
 
-.index_post h2 a {
-  color: #ff6f61; /* 橙色 */
-  text-decoration: none;
-  transition: color 0.1s ease;
-}
-
-.index_post h2 a:hover {
-  color: #ff1493; /* 热情粉红 */
-  background-color: #ffe4e1; /* 粉红色背景 */
-}
 
 /* 文章信息區 */
 .index_post p {
@@ -51,7 +41,7 @@
 
 .index_post .post-date, .index_post .post-author {
   font-style: italic;
-  color: #ff69b4; /* 热情粉红 */
+  color: #e64c99; /* 热情粉红 */
 }
 
 /* 摘要區 */
@@ -94,14 +84,15 @@
   margin: 10px 0; /* 加一些外邊距 */
 }
 
-.post-tags li,
-.post-categories li {
-  margin-right: 10px; /* 每個項目之間的間距 */
+.post-tags ul {
+  display: flex; /* 使用 flexbox */
+  flex-wrap: wrap; /* 允許換行 */
+  padding: 0; /* 去掉預設內邊距 */
+  margin: 0; /* 去掉預設外邊距 */
 }
 
 .post-tags span,
 .post-categories span {
   margin-right: 5px; /* 標籤或類別名稱與項目之間的間距 */
   font-weight: bold; /* 可以加粗字體 */
-  color: #ff6347; /* 西红柿红 */
 }

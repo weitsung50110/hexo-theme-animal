@@ -1,6 +1,7 @@
+<% page.layout = 'index'; %>
 <!-- 限制每頁顯示的文章數量 -->
 <%
-  var pageSize = 6; // 每頁顯示的文章數量
+  var pageSize = 7; // 每頁顯示的文章數量
   var posts = page.posts || [];
   var totalPosts = posts.length;
 
@@ -25,9 +26,12 @@
 
 
 <div class="posts-container">
+  
   <% visiblePosts.forEach(function(post) { %>
     <article class="index_post">
-      <h2><a href="<%= post.permalink %>"><%= post.title %></a></h2>
+      <h2 class="title-link" onclick="location.href='<%= post.permalink %>'">
+        <%= post.title %>
+      </h2>
       <p class="post-date"><%= moment(post.date).tz('Asia/Taipei').format('YYYY-MM-DD') %></p>
       <div class="excerpt">
         <%- post.excerpt %>
