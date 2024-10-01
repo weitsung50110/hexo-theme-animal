@@ -27,11 +27,21 @@
   font-size: 1.5em;
   color: #515fd7; /* 西红柿红 */
   text-align: center;
-  background-color: #f5fff3; /* 柔和的奶油色背景 */
+  background-color: #f3faff; /* 柔和的奶油色背景 */
   padding: 10px; /* rgb(244, 255, 243)/
   border-radius: 5px; /* 圆角边框 */
 }
 
+.index_post h2 {
+  color: #ff6f61; /* 橙色 */
+  text-decoration: none;
+  transition: color 0.1s ease;
+}
+
+.index_post h2:hover {
+  color: #ff1493; /* 热情粉红 */
+  background-color: #fff4f3; /* 粉红色背景 */
+}
 
 /* 文章信息區 */
 .index_post p {
