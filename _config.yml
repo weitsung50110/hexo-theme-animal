@@ -2,8 +2,8 @@
 name: hexo-theme-animal
 version: 1.0.0
 
-author: Weiberson Chang (weitsung50110)
-title: Weiberson Chang Template
+author: 崴寶 Weibert Weiberson 
+title: 崴寶 Weibert Weiberson Template
 
 custom:
   logo: /images/2.png
@@ -29,4 +29,4 @@ sidebar:
   Auther_descrip: "(Wei Tsung Chang)"
   other: "Master of Computer Science / AI Software Engineer"
   website: "https://weitsung50110.github.io/"
-  website_btn: "Wei Tsung的網站"
+  website_btn: "崴寶 Weibert Weiberson"
