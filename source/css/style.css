@@ -11,16 +11,6 @@ body {
   background-color: #f0f0f0; /* 更改為淺灰色背景 */
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #4fc3f7;
-  color: #fff;
-}
-
-footer p {
-  margin: 0;
-}
 
 
 
@@ -77,21 +67,22 @@ footer p {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   color: rgb(255, 131, 131);
   border: none;
-  padding: 10px 15px;
+  padding: 10px 16px;
   border-radius: 5px;
   cursor: pointer;
   display: none; /* 默認隱藏按鈕 */
   z-index: 1000; /* 確保按鈕在最上層 */
-  font-size: 16px;
+  font-size: 26px;
   transition: opacity 0.3s ease;
 }
 
 .scroll-to-top-btn:hover {
   background-color: #d8fdfd;
 }
+
 
 
 .cursor-effect {

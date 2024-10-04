@@ -25,8 +25,13 @@ menu:
 
 sidebar:
   Author_photo: /images/a1.jpg
-  Author: "Weiberson Chang"
-  Auther_descrip: "(Wei Tsung Chang)"
+  Author: "崴寶"
+  Auther_descrip: "(Weibert Weiberson)"
   other: "Master of Computer Science / AI Software Engineer"
   website: "https://weitsung50110.github.io/"
   website_btn: "崴寶 Weibert Weiberson"
+
+float:
+  toc: "📖"
+  scroll_to_top: "▲"
+  side_bar: "🤗"

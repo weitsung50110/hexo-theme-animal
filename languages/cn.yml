@@ -15,5 +15,3 @@ post:
   total: '文章數量:'
   total2: '篇'
 
-float:
-  toc: '目錄'

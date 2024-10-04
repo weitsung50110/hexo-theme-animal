@@ -1,0 +1,34 @@
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(173, 216, 230, 0.6); /* 半透明黑色 */
+  color: #2c3e50;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer {
+  width: 100%; /* 確保 footer 的寬度為 100% */
+  overflow: hidden; /* 隱藏任何溢出的內容 */
+  padding: 0; /* 確保沒有額外的填充 */
+  margin: 0; /* 確保沒有額外的邊距 */
+}
+
+.footer-logo {
+  width: 100%; /* 寬度自動填滿 */
+  height: 10%; /* 高度自動，保持比例 */
+  max-width: 100%; /* 確保不超出父元素的寬度 */
+  display: block; /* 去除底部間隙 */
+  box-sizing: border-box; /* 使用 box-sizing 來避免計算問題 */
+}
+
+.footer-rwd-logo{
+  width: 100%; /* 寬度自動填滿 */
+  height: 10%; /* 高度自動，保持比例 */
+  max-width: 100%; /* 確保不超出父元素的寬度 */
+  display: block; /* 去除底部間隙 */
+  box-sizing: border-box; /* 使用 box-sizing 來避免計算問題 */
+  display: none;
+}

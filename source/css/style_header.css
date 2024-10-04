@@ -1,11 +1,19 @@
 /* Header 樣式 */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
 header {
-  background: linear-gradient(135deg, #81d4fa, #4fc3f7);
+  background: rgba(173, 216, 230, 0.6); /* 半透明水藍色 */
+  background-size: 400% 400%;  /* 增加背景圖像的覆蓋範圍 */
+  animation: gradientAnimation 15s ease infinite; /* 設置動畫效果*/
   color: #fff;
   padding: 10px 20px;
   display: flex;
-  flex-direction: column; /* 將 header 分成兩行 */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 增加陰影效果 */
   position: relative;
 }
 
@@ -17,7 +25,7 @@ header .logo2 {
   width: 15%;
   height: 100%;
   background-repeat: no-repeat;
-  /* opacity: 0.3; 設置透明度以便背景漸變顯示出來 */
+  border-radius: 0; /* 確保不會變成圓形 */
 }
 
 /* Header 內容 */
@@ -30,6 +38,7 @@ header .logo2 {
 header img {
   max-width: 150px;
   height: auto;
+  border-radius: 100%;
 }
 
 header h1 {
@@ -38,18 +47,40 @@ header h1 {
 }
 
 header h1 a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1.5em;
+  color: #2c3e50; /* 深水藍色 */
+  text-decoration: none; /* 去除下劃線 */
+  font-size: 1.2em; /* 設定字體大小 */
+  position: relative; /* 設定為相對定位，以便後面的絕對定位元素可以參考 */
+  display: inline-block; /* 使元素可設置寬高，並允許 padding 和 margin 生效 */
+  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* 設定顏色、變形和背景顏色的過渡效果 */
+  padding: 5px 10px; /* 增加內邊距以使背景顏色更顯示 */
+  border-radius: 5px; /* 添加圓角，讓邊緣看起來更柔和 */
 }
 
 header h1 a:hover {
-  color: #ffe1e1;
+  color: #252c48; /* 在 hover 時改變字體顏色 */
+  transform: scale(1.05); /* 在 hover 時稍微放大元素 */
+  background-color: rgba(255, 255, 255, 0.2); /* 在 hover 時改變背景顏色 */
+}
+
+header h1 a::after {
+  content: ''; /* 使用伪元素創建一個空內容 */
+  position: absolute; /* 絕對定位，以便可以精確放置 */
+  left: 50%; /* 將元素放置在父元素的中間 */
+  bottom: 0; /* 將元素放在父元素的底部 */
+  width: 100%; /* 設定寬度為父元素的 100% */
+  height: 2px; /* 設定底部線條的高度 */
+  background-color: #87ceeb; /* 水藍色 */
+  transform: translateX(-50%) scaleX(0); /* 初始狀態，不顯示（縮放為 0） */
+  transition: transform 0.3s ease; /* 設定底部線條的過渡效果 */
+}
+
+header h1 a:hover::after {
+  transform: translateX(-50%) scaleX(1); /* 在 hover 時顯示底部線條 */
 }
 
 /* 導航樣式 */
 nav {
-  /* margin-top: 10px; */
   display: flex;
   flex-direction: column; /* 將選單分為上下兩行 */
 }
@@ -59,7 +90,7 @@ nav {
   position: fixed; /* 固定在頁面上 */
   right: 0; /* 距離頁面左側 */
   top: 0; /* 距離頁面頂部 */
-  background-color: rgba(0, 0, 0, 0.3); /* 半透明底色 */
+  background-color: rgba(255, 254, 200, 0.36); /* 半透明水藍色底色 */
   padding: 0;
   margin: 0;
   display: flex;
@@ -75,7 +106,7 @@ nav {
 }
 
 .nav-top li a{
-  color: #fff;
+  color: #2c3e50; /* 深水藍色 */
   text-decoration: none;
   font-size: 1em;
   background: none;
@@ -87,6 +118,7 @@ nav {
 
 .nav-top li a:hover{
   text-decoration: underline;
+  background-color: rgba(254, 193, 167, 0.5); /* 增加一點顏色 */
 }
 
 /* 下拉菜單樣式 */
@@ -95,7 +127,7 @@ nav {
   position: absolute; /* 絕對定位 */
   top: 100%; /* 從父元素（menu-button）底部開始 */
   left: 0; /* 與父元素（menu-button）左邊對齊 */
-  background: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
   border: 1px solid #ddd;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -116,8 +148,8 @@ nav {
 .nav-menu a {
   display: block;
   padding: 10px 15px;
-  color: #ddd !important;
-  background-color: rgba(8, 22, 57, 0.694) !important;
+  color: #ddd !important; /* 深水藍色 */
+  background-color: rgba(204, 232, 255, 0.5); /* 浅水藍色 */
   text-decoration: none;
   border-bottom: 1px solid #ddd;
 }
@@ -125,7 +157,7 @@ nav {
 /* 連結懸停樣式 */
 .nav-menu a:hover {
   color: #ffffff !important;
-  background-color: rgb(196, 82, 33) !important;
+  background-color: rgba(93, 243, 243, 0.8) !important; /* 水藍色 */
 }
 
 .dropdown_social-icon {
@@ -137,7 +169,7 @@ nav {
 /* 漢堡選單樣式 */
 .menu-toggle {
   display: none;
-  background: #4fc3f7;
+  background: linear-gradient(45deg, #4ca1af, #c4e0e5); /* 水藍色漸變 */
   color: #fff;
   border: none;
   padding: 10px;
@@ -156,4 +188,9 @@ nav {
   padding: 0;
   margin: 0;
   margin-top: 10px;
+}
+
+#press_show_cute img {
+  width: 30px; /* 設定圖片寬度 */
+  height: 30px; /* 設定圖片高度 */
 }
