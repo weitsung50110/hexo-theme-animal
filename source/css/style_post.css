@@ -244,6 +244,13 @@ ol li::marker {
   padding: 10px; /* 調整內邊距 */
 }
 
+.custom-quote img {
+  max-width: 30%; /* 最大寬度為父元素的 80% */
+  height: auto; /* 自動調整高度 */
+  margin: 0 auto; /* 置中顯示 */
+  border-radius: 20%; /* 圓角 */
+}
+
 cen {
   border: 4px dashed #ccc;
   background-color: #f6fdff; /* 背景顏色 */

@@ -222,4 +222,14 @@
       height: 30px; /* 圖標高度 */
       padding: 0%;
     }
+
+
+    /* 使用 > 符號來創建引用框 */
+    .custom-quote img {
+      max-width: 100%; /* 最大寬度為父元素的 80% */
+      height: auto; /* 自動調整高度 */
+      margin: 0 auto; /* 置中顯示 */
+      display: block; /* 使圖片成為塊級元素以便於置中 */
+      border-radius: 0%; /* 圓角 */
+    }
   }
