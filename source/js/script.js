@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+//cursor滑鼠的特效
 document.addEventListener('mousemove', function(e) {
   const cursorEffect = document.getElementById('cursor-effect');
   const scrollbarWidth = 12; // 根據你的滾動條寬度設置
