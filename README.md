@@ -7,6 +7,8 @@ https://weitsung50110.github.io/hexo-theme-animal-site/
 
 https://github.com/weitsung50110/hexo-theme-animal-site
 
+教學文章可以看這邊[瀏覽教學文章](https://medium.com/@weiberson/%E4%BD%BF%E7%94%A8hexo%E5%89%B5%E4%BD%9C%E9%83%A8%E8%90%BD%E6%A0%BC%E4%B8%BB%E9%A1%8C%E6%A8%A1%E6%9D%BF-%E7%94%A8ejs%E6%89%93%E9%80%A0%E5%B0%88%E5%B1%AC%E8%87%AA%E5%B7%B1%E9%83%A8%E8%90%BD%E6%A0%BC-hexo-theme-animal-850b13a16aa5)
+
 This project use ejs as template.
 ### 樹狀圖
     my-blog/
